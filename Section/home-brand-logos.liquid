@@ -1,0 +1,410 @@
+<link rel="stylesheet"  href="{{ 'home-custom.css' | asset_url }}"   >
+{{ 'swiper.css' | asset_url | stylesheet_tag }}
+{{ 'swiper.js' | asset_url | script_tag }}
+
+
+ {%liquid  
+      assign width =  section.settings.width 
+      assign top =  section.settings.top 
+      assign bottom =  section.settings.bottom 
+      assign left =  section.settings.left 
+      assign right =  section.settings.right 
+      assign color =  section.settings.color  
+      assign logoperrow = section.settings.logoperrow 
+    %}
+ <style>
+   #shopify-section-{{ section.id }}{
+     background-color:{{color}};
+   }
+   .brandLogos{
+     
+    display: flex;
+    flex-wrap:wrap;
+    align-items: center;
+    row-gap: 15px;
+    
+   }
+   .brandLogos .logos{
+     gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    
+   }
+   .brandLogos .logos img{
+     
+   }
+
+
+   #shopify-section-{{ section.id }} .main_div{
+     position: relative;
+     height: 100%;
+     box-sizing: border-box;
+     width: 100%;
+     display:none;
+   }
+   #shopify-section-{{ section.id }}  .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+     #shopify-section-{{ section.id }} .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+   #shopify-section-{{ section.id }} .swiper-wrapper{
+       align-items: center;
+   }
+
+     #shopify-section-{{ section.id }} .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 80px;
+      object-fit: contain;
+    }
+
+@media(max-width:767px){
+      #shopify-section-{{ section.id }} .main_div{
+        display:block;
+       
+    box-sizing: border-box;
+      }
+  #shopify-section-{{ section.id }} .brandLogos{
+     display:none;
+  }
+      #shopify-section-{{ section.id }} .blockStyle h2{
+                   font-size:18px;
+                  font-weight:700;
+        margin:0;
+                }
+   #shopify-section-{{ section.id }} {
+     padding:50px 15px;
+      box-sizing: border-box;
+   }
+   #shopify-section-{{ section.id }} .container{
+      padding:0px 0px !important;
+   }
+  #shopify-section-{{ section.id }} .blockStyle{
+    padding:0px 0px 30px 0px !important;
+  }
+
+}
+   
+ </style>
+ 
+<section class="id_{{ section.id }}">
+    <div class="{{ width }}" style="
+        padding-top:{{ top }}px;
+        padding-bottom:{{ bottom }}px;
+        padding-left:{{ left }}px;
+        padding-right:{{ right }}px; 
+      ">
+      <div class="flex wrap align-center justify-center">
+
+
+
+        <div class="col-100 blockStyle">
+          {% for block in section.blocks %} 
+            
+        {%liquid  
+            assign title =  block.settings.title
+            assign content =  block.settings.content
+            assign url =  block.settings.url
+            assign urltext =  block.settings.urltext 
+            assign padding =  block.settings.padding 
+            assign align =  block.settings.align
+            assign textColor = block.settings.textColor
+            
+          %}
+            {% case block.type %}
+              
+              {% when 'title' %}
+              <h2>{{ title }}</h2>
+              {% when 'content' %}
+              <div class="content">
+                <p>{{ content }}</p>
+              </div>
+              {% when 'link' %} 
+                <a class="btn" href="{{ url }}"><span>{{ urltext }}</span></a>
+              {% when 'style' %} 
+              <style>
+                #shopify-section-{{ section.id }} .blockStyle{
+                  padding:{{padding}};
+                  {% if align == true %}
+                    text-align:center;
+                  {% endif %}
+                }
+                
+                #shopify-section-{{ section.id }} .blockStyle h2{
+                   font-size:35px;
+                  font-weight:700;
+                }
+                #shopify-section-{{ section.id }} .blockStyle p{
+                   
+                }
+                #shopify-section-{{ section.id }} .blockStyle h2,
+                #shopify-section-{{ section.id }} .blockStyle p,
+                #shopify-section-{{ section.id }} .blockStyle   ul li,
+                #shopify-section-{{ section.id }} .blockStyle h1{
+                  color:{{textColor}};
+                   
+                }
+                @media(max-width:767px){
+                  #shopify-section-{{ section.id }} .blockStyle{
+                    padding:30px 20px;
+                  }
+                }
+              </style>
+            {% endcase %}
+          {% endfor %}
+        </div>
+
+        
+         <div class="col-75"> 
+           <div class=" flex brandLogos">
+
+             
+            {% for block in section.blocks %} 
+              {%liquid 
+                  assign media =  block.settings.image 
+                  
+                %}
+            
+              {% case block.type %}
+                {% when 'image' %}
+                   {%  if media != blank %} 
+                     <div class="logos {{ logoperrow }}">
+                        {% assign logostyle = "max-width: " | append: block.settings.logowidth | append: "px; width:100%;" %}
+                       
+                      <img src="{{ media | img_url: 'master' }}" style="{{ logostyle }}" />
+                       </div>
+                  {% endif %}
+
+
+
+   
+
+
+
+
+
+                
+              {% endcase %}
+            {% endfor %}
+ </div>
+                           
+    <div class="main_div">
+    <div class="swiper logoSwiper">
+    <div class="swiper-wrapper">
+           {% for block in section.blocks %} 
+              {%liquid 
+                  assign media =  block.settings.image 
+                  
+                %}
+            
+              {% case block.type %}
+                {% when 'image' %}
+        <div class="swiper-slide">
+
+         
+                       
+                      <img src="{{ media | img_url: 'master' }}" style="{{ logostyle }}" />
+                  
+              
+      </div>
+       {% endcase %}
+            {% endfor %}
+    </div>
+  </div>
+        </div>
+         
+            
+         </div>
+        
+        
+      </div>
+    </div>
+</section>
+
+<script>
+    var swiper = new Swiper(".logoSwiper", {
+      spaceBetween: 15,
+      slidesPerView:3,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+     
+    });
+  </script>
+
+
+{% schema %}
+  {
+    "name": "Home Brand Logos",
+    "settings": [ 
+      {
+        "type": "select",
+        "label": "Section",
+        "id": "width",
+        "options":[
+          {"value":"container","label": "Container"},
+          {"value":"container-full","label": "Container Full"}
+        ]
+      },
+      {
+        "type": "select",
+        "label": "Logos Per Row",
+        "id": "logoperrow",
+        "default": "col-25",
+        "options":[
+          {"value":"col-20","label": "Per Row 5 Logos"},
+          {"value":"col-25","label": "Per Row 4 Logos"} ,
+          {"value":"col-33","label": "Per Row 3 Logos"} 
+        ]
+      },
+      {
+        "type": "color",
+        "label": "Section Color",
+        "id": "color" 
+      },
+      {
+        "type": "header",
+        "content": "Section Padding"
+      },
+      {
+        "type": "range",
+        "label": "Top",
+        "id": "top",
+         "min":0,
+        "max":200,
+        "step": 5,
+        "default":0
+      },
+      {
+        "type": "range",
+        "label": "Bottom",
+        "id": "bottom",
+         "min":0,
+        "max":200,
+        "step": 5,
+        "default":0
+      },
+      {
+        "type": "range",
+        "label": "Left",
+        "id": "left",
+         "min":0,
+        "max":200,
+        "step": 5,
+        "default":0
+      },
+      {
+        "type": "range",
+        "label": "Right",
+        "id": "right",
+         "min":0,
+        "max":200,
+        "step": 5,
+        "default":0
+      }
+    ],
+    "blocks":[
+      {
+        "type": "image",
+        "name":"Image",
+        "settings": [
+            {
+              "type": "image_picker",
+              "label": "Image",
+              "id": "image" 
+            },
+            {
+              "type": "range",
+              "label": "Max Width",
+              "id": "logowidth",
+               "min":0,
+              "max":300,
+              "step": 5,
+              "default":100
+            }
+        ] 
+      },
+      {
+        "type": "title",
+        "name":"Title",
+        "settings": [
+          {
+            "type": "text",
+            "label": "Title",
+            "id": "title",
+            "default":"Drive More Conversions with AI-Optimized Landing Pages"
+          }
+        ] 
+      },
+      {
+        "type": "content",
+        "name":"Content",
+        "settings": [
+          {
+            "type": "textarea",
+            "label": "Content",
+            "id": "content",
+            "default":"Personalized customer journeys from click to conversion with the power of AI and A/B testing"
+          }
+        ] 
+      },
+      
+      {
+        "type": "link",
+        "name":"Link",
+        "settings": [
+          {
+            "type": "url",
+            "label": "URL",
+            "id": "url" 
+          },
+          {
+            "type": "text",
+            "label": "Button Text",
+            "id": "urltext",
+            "default":"Increase My Conversions"
+          }
+        ] 
+      } ,
+      {
+        "type": "style",
+        "name":"Style",
+        "settings": [
+          {
+            "type": "text",
+            "label": "Padding",
+            "id": "padding" 
+          }, 
+          {
+            "type": "color",
+            "id": "textColor",
+            "label": "Text Color" 
+          }, 
+          
+          {
+            "type": "checkbox",
+            "label": "Text Align",
+            "id": "align"
+             
+          }
+        ] 
+      } 
+    ],
+    "presets": [
+      {
+        "name":"Home Brand Logos"
+      }
+    ]
+  }
+{% endschema %}
+ 

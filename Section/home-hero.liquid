@@ -1,0 +1,242 @@
+<link rel="stylesheet"  href="{{ 'home-custom.css' | asset_url }}"   >
+
+
+ {%liquid  
+      assign width =  section.settings.width 
+      assign top =  section.settings.top 
+      assign bottom =  section.settings.bottom 
+      assign left =  section.settings.left 
+      assign right =  section.settings.right 
+      assign color =  section.settings.color  
+    %}
+ <style>
+   #shopify-section-{{ section.id }}{
+     background-color:{{color}};
+   }
+ </style>
+ 
+<section class="id_{{ section.id }}">
+    <div class="{{ width }}" style="
+        padding-top:{{ top }}px;
+        padding-bottom:{{ bottom }}px;
+        padding-left:{{ left }}px;
+        padding-right:{{ right }}px; 
+      ">
+      <div class="flex wrap align-center justify-center">
+        
+      {% for block in section.blocks %} 
+        {%liquid 
+            assign media =  block.settings.image 
+            
+          %}
+        
+          {% case block.type %}
+            {% when 'image' %}
+               {%  unless media == empty %}
+               <div class="col-50"> 
+                 {{ media | img_url: 'master' | img_tag }} 
+               </div> 
+              {% endunless %}
+          {% endcase %}
+        {% endfor %}
+
+        <div class="col-50 blockStyle">
+          {% for block in section.blocks %} 
+            
+        {%liquid  
+            assign title =  block.settings.title
+            assign content =  block.settings.content
+            assign url =  block.settings.url
+            assign urltext =  block.settings.urltext 
+            assign padding =  block.settings.padding 
+            assign align =  block.settings.align
+            assign textColor = block.settings.textColor
+            
+          %}
+            {% case block.type %}
+              
+              {% when 'title' %}
+              <h1>{{ title }}</h1>
+              {% when 'content' %}
+              <div class="content">
+                <p>{{ content }}</p>
+              </div>
+              {% when 'link' %} 
+                <a class="btn" href="{{ url }}"><span>{{ urltext }}</span></a>
+              {% when 'style' %} 
+              <style>
+                #shopify-section-{{ section.id }} .blockStyle{
+                  padding:{{padding}};
+                  {% if align == true %}
+                    text-align:center;
+                  {% endif %}
+                }
+                
+                #shopify-section-{{ section.id }} .blockStyle h2,
+                #shopify-section-{{ section.id }} .blockStyle p,
+                #shopify-section-{{ section.id }} .blockStyle p ul li,
+                #shopify-section-{{ section.id }} .blockStyle h1{
+                  color:{{textColor}};
+                   
+                }
+                @media(max-width:767px){
+                  #shopify-section-{{ section.id }} .blockStyle{
+                    padding:30px 20px;
+                  }
+                }
+              </style>
+            {% endcase %}
+          {% endfor %}
+        </div>
+        
+        
+      </div>
+    </div>
+</section>
+
+
+{% schema %}
+  {
+    "name": "Home Hero",
+    "settings": [ 
+      {
+        "type": "select",
+        "label": "Section",
+        "id": "width",
+        "options":[
+          {"value":"container","label": "Container"},
+          {"value":"container-full","label": "Container Full"}
+        ]
+      },
+      {
+        "type": "color",
+        "label": "Section Color",
+        "id": "color" 
+      },
+      {
+        "type": "header",
+        "content": "Section Padding"
+      },
+      {
+        "type": "range",
+        "label": "Top",
+        "id": "top",
+         "min":0,
+        "max":200,
+        "step": 5,
+        "default":0
+      },
+      {
+        "type": "range",
+        "label": "Bottom",
+        "id": "bottom",
+         "min":0,
+        "max":200,
+        "step": 5,
+        "default":0
+      },
+      {
+        "type": "range",
+        "label": "Left",
+        "id": "left",
+         "min":0,
+        "max":200,
+        "step": 5,
+        "default":0
+      },
+      {
+        "type": "range",
+        "label": "Right",
+        "id": "right",
+         "min":0,
+        "max":200,
+        "step": 5,
+        "default":0
+      }
+    ],
+    "blocks":[
+      {
+        "type": "image",
+        "name":"Image",
+        "settings": [
+            {
+              "type": "image_picker",
+              "label": "Image",
+              "id": "image" 
+            }
+        ] 
+      },
+      {
+        "type": "title",
+        "name":"Title",
+        "settings": [
+          {
+            "type": "text",
+            "label": "Title",
+            "id": "title",
+            "default":"Drive More Conversions with AI-Optimized Landing Pages"
+          }
+        ] 
+      },
+      {
+        "type": "content",
+        "name":"Content",
+        "settings": [
+          {
+            "type": "textarea",
+            "label": "Content",
+            "id": "content",
+            "default":"Personalized customer journeys from click to conversion with the power of AI and A/B testing"
+          }
+        ] 
+      },
+      
+      {
+        "type": "link",
+        "name":"Link",
+        "settings": [
+          {
+            "type": "url",
+            "label": "URL",
+            "id": "url" 
+          },
+          {
+            "type": "text",
+            "label": "Button Text",
+            "id": "urltext",
+            "default":"Increase My Conversions"
+          }
+        ] 
+      } ,
+      {
+        "type": "style",
+        "name":"Style",
+        "settings": [
+          {
+            "type": "text",
+            "label": "Padding",
+            "id": "padding" 
+          }, 
+          {
+            "type": "color",
+            "id": "textColor",
+            "label": "Text Color" 
+          }, 
+          
+          {
+            "type": "checkbox",
+            "label": "Text Align",
+            "id": "align"
+             
+          }
+        ] 
+      } 
+    ],
+    "presets": [
+      {
+        "name":"Home Hero"
+      }
+    ]
+  }
+{% endschema %}
+ 

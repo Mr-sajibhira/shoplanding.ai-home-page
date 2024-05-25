@@ -1,0 +1,551 @@
+<link rel="stylesheet"  href="{{ 'home-custom.css' | asset_url }}"   >
+{{ 'swiper.css' | asset_url | stylesheet_tag }}
+{{ 'swiper.js' | asset_url | script_tag }}
+
+ {%liquid  
+      assign width =  section.settings.width 
+      assign top =  section.settings.top 
+      assign bottom =  section.settings.bottom 
+      assign left =  section.settings.left 
+      assign right =  section.settings.right 
+      assign color =  section.settings.color  
+    %}
+ <style>
+   #shopify-section-{{ section.id }}{
+     background-color:{{color}};
+   }
+
+ </style>
+ 
+<section class="id_{{ section.id }}">
+    <div class="{{ width }}" style="
+        padding-top:{{ top }}px;
+        padding-bottom:{{ bottom }}px;
+        padding-left:{{ left }}px;
+        padding-right:{{ right }}px; 
+      ">
+      <div class="flex wrap align-center justify-center">
+        
+     
+
+        <div class="col-75 blockStyle">
+          {% for block in section.blocks %} 
+            
+        {%liquid  
+            assign media =  block.settings.image 
+          
+
+          
+            assign textColor = block.settings.textColor
+            assign title =  block.settings.title
+            assign subtitle =  block.settings.subtitle
+            assign content =  block.settings.content
+            assign url =  block.settings.url
+            assign urltext =  block.settings.urltext 
+            assign padding =  block.settings.padding 
+            assign align =  block.settings.align
+            
+          %}
+            {% case block.type %}
+   
+              
+            {% when 'image' %}
+               {%  unless media == empty %}
+               <div class=""> 
+                 {{ media | img_url: 'master' | img_tag }} 
+               </div> 
+              {% endunless %}
+              
+              {% when 'subtitle' %}
+              <h5 class="subtitle">{{ subtitle }}</h5>
+              {% when 'title' %}
+              <h2>{{ title }}</h2>
+              {% when 'content' %}
+              <div class="content">
+                <p>{{ content }}</p>
+              </div>
+              {% when 'link' %} 
+                <a class="btn" href="{{ url }}"><span>{{ urltext }}</span></a>
+              {% when 'style' %} 
+              <style>
+                #shopify-section-{{ section.id }} .blockStyle{
+                  padding:{{padding}};
+                  {% if align == true %}
+                    text-align:center;
+                  {% endif %}
+                  
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  gap: 15px;
+                  justify-content: center;
+                  
+                }
+                #shopify-section-{{ section.id }} .blockStyle h2{
+                  font-size:60px;
+                  font-weight:700;
+                  line-height:120%;
+                    margin: 0;
+                }
+                #shopify-section-{{ section.id }} .blockStyle h2,
+                #shopify-section-{{ section.id }} .blockStyle p,
+                #shopify-section-{{ section.id }} .blockStyle p ul li,
+                #shopify-section-{{ section.id }} .blockStyle h1{
+                  color:{{textColor}};
+                   
+                }
+                
+                 
+                @media(max-width:767px){
+                  #shopify-section-{{ section.id }} .blockStyle{
+                    padding:30px 20px;
+                  }
+               #shopify-section-{{ section.id }} .blockStyle h2{
+                  font-size:28px;
+                   
+                }
+ 
+                }
+              </style>
+            {% endcase %}
+          {% endfor %}
+        </div>
+        
+        
+      </div>
+
+    <div class="sliderdiv">
+    <div class="swiper sliderSwiper">
+       <div class="swiper-wrapper">
+      {% for block in section.blocks %}
+        {% case block.type %}
+         {% when 'slider' %}
+            <div class="swiper-slide">
+
+                 <div class="single wrap">
+                  {% if block.settings.img != blank %}
+                       <div class="img_box col-50">
+                         <img src="{{ block.settings.img | image_url }}" alt="{{ block.settings.img.alt }}" height="100" width="100">
+                       </div>
+                       {% endif %}
+
+                   
+
+                   <div class="info col-50">
+                     <a href="{{ block.settings.link }}">
+                      <h3 class="slider_title"><u>{{ block.settings.title }}</u></h3>
+                    </a>
+                    <div class="description">
+                     <p class="slider_des">{{ block.settings.des }}</p>   
+                   </div>
+                     <div class="flex wrap number_main">
+                      <div class="number_box col-50">
+                        <h3 class="number">{{ block.settings.number1 }}</h3>
+                         <p class="number_des">{{ block.settings.numbertext1 }}</p>
+                      </div>
+                          <div class="number_box col-50">
+                        <h3 class="number">{{ block.settings.number2 }}</h3>
+                         <p class="number_des">{{ block.settings.numbertext2 }}</p>
+                      </div>
+                       <div class="line"></div>
+                       </div>
+                   </div>
+                      
+                  </div>
+               
+            </div>
+        {% endcase %}
+       {% endfor %}
+       </div>
+      
+    <div class="swiper-button-next" style="display:block;"></div>
+    <div class="swiper-button-prev" style="display:block;"></div>
+    <div class="swiper-pagination" style="display:block;"></div>
+      
+  </div>
+</div>
+
+    <style>
+ #shopify-section-{{ section.id }} .sliderdiv{
+    position: relative;
+      height: 100%;
+ }
+#shopify-section-{{ section.id }} .slider_title{
+   font-size: 24px;
+      font-family:Poppins;
+      font-weight: 500;
+      letter-spacing:normal;
+      line-height: 150%;
+  margin:0px 0px 10px 0px;
+   color:{{section.settings.boxtextcolor}};
+}
+
+#shopify-section-{{ section.id }} .slider_des{
+   font-size: 18px;
+      font-family:Poppins;
+      font-weight: 400;
+      letter-spacing:0.6px;
+      line-height: 150%;
+  margin:0px 0px 36px 0px;
+   color:{{section.settings.boxtextcolor}};
+}
+
+#shopify-section-{{ section.id }} .number_main{
+ margin:-16px;
+}
+
+ #shopify-section-{{ section.id }} .number_box{
+   padding:16px;
+   box-sizing: border-box;
+ }
+      
+#shopify-section-{{ section.id }} .number{
+   font-size: 42px;
+      font-family:rubik;
+      font-weight: 700;
+      letter-spacing:normal;
+      line-height: 120%;
+  margin:0px 0px 10px 0px;
+   color:{{section.settings.boxtextcolor}};
+}
+#shopify-section-{{ section.id }} .number_des{
+   font-size: 16px;
+      font-family:Rubik;
+      font-weight: 400;
+      letter-spacing:0.6px;
+      line-height: 150%;
+  margin:0px 0px 16px 0px;
+   color:{{section.settings.boxtextcolor}};
+}
+
+#shopify-section-{{ section.id }} .number_main{
+  margin:0px 0px 16px 0px;
+}
+#shopify-section-{{ section.id }} .number_main .line{
+  margin:16px 0px 16px 0px;
+  display:block;
+  height:1px;
+  width:100%;
+ background-color:{{section.settings.boxtextcolor}};
+}
+      #shopify-section-{{ section.id }} .single .img_box img{
+         object-fit: cover;
+    aspect-ratio: 1715/1363;
+        width:100%;
+        height:100%;
+      }
+
+#shopify-section-{{ section.id }} .single{
+  margin:-16px;
+  display: flex;
+    align-items: center;
+}
+      
+#shopify-section-{{ section.id }} .single .img_box, #shopify-section-{{ section.id }} .single .info{
+ padding:16px;
+  box-sizing: border-box;
+}
+
+#shopify-section-{{ section.id }} .swiper-pagination-bullet-active{
+  background-color: {{section.settings.boxtextcolor}} !important;
+  
+  
+ }
+   #shopify-section-{{ section.id }} .swiper-pagination-bullet{
+      width:12px;
+      height:12px;
+   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px;
+     --tw-shadow: 0 2px 4px -2px rgba(0,0,0,.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color),0 2px 4px -2px var(--tw-shadow-color);
+ }
+  #shopify-section-{{ section.id }} .swiper-button-prev::after, #shopify-section-{{ section.id }} .swiper-button-next::after{
+    font-size: 24px;
+    font-weight:bold;
+    color:{{section.settings.boxtextcolor}};
+  }
+
+
+
+      @media(max-width:767px){
+         #shopify-section-{{ section.id }} .sliderdiv{
+           padding:0px 15px;
+            text-align: center;
+      }
+
+#shopify-section-{{ section.id }} .number_main{
+      text-align: center;
+    justify-content: center;
+}
+#shopify-section-{{ section.id }} .slider_title{
+   font-size: 20px;
+}
+        #shopify-section-{{ section.id }} .slider_des{
+   font-size: 14px;
+          
+}
+        
+#shopify-section-{{ section.id }} .number{
+   font-size: 28px;
+}
+#shopify-section-{{ section.id }} .number_des{
+   font-size: 14px;
+  margin:0px 0px 10px 0px;
+ 
+}
+
+
+#shopify-section-{{ section.id }} .single{
+  margin:-10px;
+  display: flex;
+    align-items: center;
+}
+      
+#shopify-section-{{ section.id }} .single .img_box, #shopify-section-{{ section.id }} .single .info{
+ padding:10px;
+  box-sizing: border-box;
+}
+
+
+      
+      }  
+    </style>  
+      
+
+
+
+      
+    </div>
+</section>
+
+<script>
+    var swiper = new Swiper(".sliderSwiper", {
+      cssMode: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      }, centeredSlides: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      mousewheel: true,
+      keyboard: true,
+    });
+  </script>
+
+
+{% schema %}
+  {
+    "name": "Home Slider",
+    "settings": [ 
+      {
+        "type": "select",
+        "label": "Section",
+        "id": "width",
+        "options":[
+          {"value":"container","label": "Container"},
+          {"value":"container-full","label": "Container Full"}
+        ]
+      },
+      {
+        "type": "color",
+        "label": "Section Color",
+        "id": "color" 
+      },
+            {
+        "type": "color",
+        "label": "Box Text Color",
+        "id": "boxtextcolor" ,
+        "default":"#000000"
+      },
+      {
+        "type": "header",
+        "content": "Section Padding"
+      },
+      {
+        "type": "range",
+        "label": "Top",
+        "id": "top",
+         "min":0,
+        "max":200,
+        "step": 5,
+        "default":0
+      },
+      {
+        "type": "range",
+        "label": "Bottom",
+        "id": "bottom",
+         "min":0,
+        "max":200,
+        "step": 5,
+        "default":0
+      },
+      {
+        "type": "range",
+        "label": "Left",
+        "id": "left",
+         "min":0,
+        "max":200,
+        "step": 5,
+        "default":0
+      },
+      {
+        "type": "range",
+        "label": "Right",
+        "id": "right",
+         "min":0,
+        "max":200,
+        "step": 5,
+        "default":0
+      }
+    ],
+    "blocks":[
+      {
+        "type": "image",
+        "name":"Image",
+        "settings": [
+            {
+              "type": "image_picker",
+              "label": "Image",
+              "id": "image" 
+            }
+        ] 
+      },
+      {
+        "type":"slider",
+        "name":"Slider",
+        "settings": [
+            {
+              "type": "image_picker",
+              "id": "img",
+              "label": "Select Image"
+            },
+            {
+              "type": "text",
+              "id": "title",
+              "label": "Title",
+              "default":"Walkee Paws"
+            },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Link"
+          },
+          {
+            "type": "textarea",
+            "id": "des",
+            "label": "Description",
+            "default":"Company with a product aimed at construction professionals had 40% consumers who identified as hobbyists and female."
+          },
+          {
+              "type": "text",
+              "id": "number1",
+              "label": "Number 1",
+              "default":"10%"
+            },
+          {
+            "type": "textarea",
+            "id": "numbertext1",
+            "label": "Description 1",
+            "default":"Decrease in Bounce Rate"
+          },
+          {
+              "type": "text",
+              "id": "number2",
+              "label": "Number 2",
+              "default":"40%"
+            },
+          {
+            "type": "textarea",
+            "id": "numbertext2",
+            "label": "Description 2",
+            "default":"Increase in Conversion Rate"
+          }
+        ]
+      },
+      {
+        "type": "subtitle",
+        "name":"Sub Title",
+        "settings": [
+          {
+            "type": "text",
+            "label": "Title",
+            "id": "subtitle",
+            "default":"Drive More Conversions with AI-Optimized Landing Pages"
+          }
+        ] 
+      },
+      {
+        "type": "title",
+        "name":"Title",
+        "settings": [
+          {
+            "type": "text",
+            "label": "Title",
+            "id": "title",
+            "default":"Drive More Conversions with AI-Optimized Landing Pages"
+          }
+        ] 
+      },
+      {
+        "type": "content",
+        "name":"Content",
+        "settings": [
+          {
+            "type": "textarea",
+            "label": "Content",
+            "id": "content",
+            "default":"Personalized customer journeys from click to conversion with the power of AI and A/B testing"
+          }
+        ] 
+      },
+      
+      {
+        "type": "link",
+        "name":"Link",
+        "settings": [
+          {
+            "type": "url",
+            "label": "URL",
+            "id": "url" 
+          },
+          {
+            "type": "text",
+            "label": "Button Text",
+            "id": "urltext",
+            "default":"Increase My Conversions"
+          }
+        ] 
+      } ,
+      {
+        "type": "style",
+        "name":"Style",
+        "settings": [
+          {
+            "type": "text",
+            "label": "Padding",
+            "id": "padding" 
+          }, 
+          {
+            "type": "color",
+            "id": "textColor",
+            "label": "Text Color" 
+          }, 
+          
+          {
+            "type": "checkbox",
+            "label": "Text Align",
+            "id": "align"
+             
+          }
+        ] 
+      } 
+    ],
+    "presets": [
+      {
+        "name":"Home Slider"
+      }
+    ]
+  }
+{% endschema %}
+ 

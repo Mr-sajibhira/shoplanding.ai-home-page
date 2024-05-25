@@ -1,0 +1,322 @@
+
+<link rel="stylesheet"  href="{{ 'home-custom.css' | asset_url }}"   >
+
+
+ {%liquid  
+      assign width =  section.settings.width 
+      assign top =  section.settings.top 
+      assign bottom =  section.settings.bottom 
+      assign left =  section.settings.left 
+      assign right =  section.settings.right 
+      assign color =  section.settings.color  
+    %}
+
+    
+<style>
+   #shopify-section-{{ section.id }}{
+     background-color:{{color}};
+   }
+     #shopify-section-{{ section.id }} .row{
+       margin:-16px;
+         box-sizing: border-box;
+     }
+   #shopify-section-{{ section.id }} .card_box{
+     padding:16px;
+      box-sizing: border-box;
+     height:100%;
+   }
+    #shopify-section-{{ section.id }} .card_box .card_box_content{
+      padding:50px;
+      border-radius:20px;
+      height:100%;
+    flex-direction: column;
+    justify-content: space-between;
+    display: flex
+    }
+  #shopify-section-{{ section.id }} .card_box h3{
+    font-size:35px;
+      font-family:Poppins;
+      font-weight:700;
+      letter-spacing:normal;
+      line-height:120%;
+    margin:0px 0px 20px 0px;
+  }
+    #shopify-section-{{ section.id }} .card_box p{
+    font-size: 16px;
+      font-family:Poppins;
+      font-weight:400;
+      letter-spacing:0.6px;
+       margin:0px 0px 25px 0px;
+      line-height:150%;
+  }
+      #shopify-section-{{ section.id }} .card_box .btn{
+       padding:8px 26px;
+      width: 100%;
+    text-align: center;
+        font-size: 16px;
+      font-family:Poppins;
+      font-weight:500;
+      letter-spacing:0px;
+        line-height:180%;
+          border-radius:20px;
+  }
+
+  @media(max-width:767px){
+    
+   #shopify-section-{{ section.id }}{
+      padding:50px 15px;
+       box-sizing: border-box;
+   }
+
+   #shopify-section-{{ section.id }} .container{
+      padding:0px !important;
+   }
+     #shopify-section-{{ section.id }} .row{
+       margin:-15px;
+     }
+   #shopify-section-{{ section.id }} .card_box{
+     padding:15px;
+   }
+
+      #shopify-section-{{ section.id }} .card_box .card_box_content{
+      padding:50px 30px;
+        text-align:center;
+    }  
+
+    #shopify-section-{{ section.id }} .card_box h3{
+    font-size:22px;
+  }
+        #shopify-section-{{ section.id }} .card_box p{
+    font-size: 14px;
+       margin:0px 0px 20px 0px;
+  }
+
+  #shopify-section-{{ section.id }} .card_box .btn{
+ font-size: 14px;
+    
+  }
+    
+    
+  }
+
+
+  
+</style>   
+   
+
+
+
+
+
+<section class="id_{{ section.id }}">
+    <div class="{{ width }}" style="
+        padding-top:{{ top }}px;
+        padding-bottom:{{ bottom }}px;
+        padding-left:{{ left }}px;
+        padding-right:{{ right }}px; 
+      ">
+
+
+  <div class="row flex wrap">
+
+
+    
+ {% for block in section.blocks %} 
+
+
+      
+{%liquid
+  
+  assign title = block.settings.title
+  assign des = block.settings.des
+  assign btn_text = block.settings.btntext
+  assign btn_url = block.settings.btnlink
+  assign box_bg = block.settings.bgcolor
+  assign box_text = block.settings.textcolor
+  assign btn_text_color = block.settings.texcolorbtn
+  assign btn_bg_color = block.settings.bdbtn
+  assign btn_hover_color = block.settings.bdbtnhover
+   assign btn_hover_color_text = block.settings.textbtnhover
+  
+%}
+
+
+        <div class="col-50">
+<style>
+        #shopify-section-{{ section.id }} .{{ block.id }} .btn:hover{
+              color:{{ btn_hover_color_text }} !important;
+              background:{{ btn_hover_color }};
+          }
+        #shopify-section-{{ section.id }} .{{ block.id }} .btn{
+         background-color:{{ btn_bg_color }}; 
+          color:{{ btn_text_color }};
+            }
+</style>
+
+          
+              <div class="card_box {{ block.id }}">             
+                 <div class="card_box_content" style="background:{{ box_bg }}">
+
+
+                <div>
+                   <h3 style="color:{{ box_text }};">{{ title }}</h3>
+                 <p style="color:{{ box_text }};">{{ des }}</p>
+                </div>
+
+                {% if btn_url != blank %}
+                  <a href="{{ btn_url }}"class="btn">{{ btn_text }}</a>
+               {% endif %}
+                   
+              </div>
+             </div>
+          </div>
+
+{% endfor %}
+
+  </div>
+
+      
+ </div>
+</section>  
+      
+
+
+
+{% schema %}
+  {
+    "name": "Home Card Box",
+    "settings": [
+            {
+        "type": "select",
+        "label": "Section",
+        "id": "width",
+        "options":[
+          {"value":"container","label": "Container"},
+          {"value":"container-full","label": "Container Full"}
+        ]
+      },
+      {
+        "type": "color",
+        "label": "Section Color",
+        "id": "color" 
+      },
+      {
+        "type": "header",
+        "content": "Section Padding"
+      },
+      {
+        "type": "range",
+        "label": "Top",
+        "id": "top",
+         "min":0,
+        "max":200,
+        "step": 5,
+        "default":0
+      },
+      {
+        "type": "range",
+        "label": "Bottom",
+        "id": "bottom",
+         "min":0,
+        "max":200,
+        "step": 5,
+        "default":0
+      },
+      {
+        "type": "range",
+        "label": "Left",
+        "id": "left",
+         "min":0,
+        "max":200,
+        "step": 5,
+        "default":0
+      },
+      {
+        "type": "range",
+        "label": "Right",
+        "id": "right",
+         "min":0,
+        "max":200,
+        "step": 5,
+        "default":0
+      }
+      
+    ],
+    "blocks": [
+      {
+        "type": "cardbox",
+        "name" : "Card Box",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default":"Make your ads more <u>relevant</u>"
+          },
+          {
+            "type": "textarea",
+            "id": "des",
+            "label": "Description",
+            "default":"ShopLandingAI turns clicks into conversions by removing friction and giving your customers what they're looking for."
+          },
+          {
+            "type": "text",
+            "id": "btntext",
+            "label": "Button Text",
+            "default":"Increase Conversions Today"
+          },
+          {
+            "type": "url",
+            "id": "btnlink",
+            "label": "Button Link"
+          },
+          {
+           "type": "header",
+           "content": "Card Box Color"
+         },
+          {
+            "type": "color",
+            "id": "bgcolor",
+            "label": "Card Box Background",
+            "default":"#d9a057"
+          },
+           {
+            "type": "color",
+            "id": "textcolor",
+            "label": "Card Box Text Color",
+             "default":"#272620"
+          },
+          {
+            "type": "color",
+            "id": "texcolorbtn",
+            "label": "Card Box Button Text Color",
+             "default":"#272620"
+          },
+            {
+            "type": "color",
+            "id": "bdbtn",
+            "label": "Card Box Button",
+            "default":"#ffffff"
+          },
+          {
+            "type": "color",
+            "id": "bdbtnhover",
+            "label": "Card Box Button Hover",
+             "default":"#4ea2b2"
+          },
+          {
+            "type": "color",
+            "id": "textbtnhover",
+            "label": "Card Box Button Text Hover",
+             "default":"#ffffff"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Home Card Box"
+      }
+    ]
+  }
+{% endschema %}

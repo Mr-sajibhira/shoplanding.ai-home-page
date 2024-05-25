@@ -1,0 +1,440 @@
+<link rel="stylesheet"  href="{{ 'home-custom.css' | asset_url }}"   >
+
+
+ {%liquid  
+      assign width =  section.settings.width 
+      assign top =  section.settings.top 
+      assign bottom =  section.settings.bottom 
+      assign left =  section.settings.left 
+      assign right =  section.settings.right 
+      assign color =  section.settings.color  
+    %}
+ <style>
+   #shopify-section-{{ section.id }}{
+     background-color:{{color}};
+   }
+   @media(max-width:767px){
+        #shopify-section-{{ section.id }}{
+    padding:0px 15px;
+   }
+   #shopify-section-{{ section.id }} .link_image {
+    max-width: 150px;
+}
+   }
+
+   
+ </style>
+ 
+<section class="id_{{ section.id }}">
+    <div class="{{ width }}" style="
+        padding-top:{{ top }}px;
+        padding-bottom:{{ bottom }}px;
+        padding-left:{{ left }}px;
+        padding-right:{{ right }}px; 
+      ">
+      <div class="flex wrap align-center justify-center">
+        
+     
+
+        <div class="col-75 blockStyle">
+          {% for block in section.blocks %} 
+            
+        {%liquid  
+            assign media =  block.settings.image 
+            assign video_url =  block.settings.video_url
+            assign video =  block.settings.video
+            assign enable_video_looping =  block.settings.enable_video_looping
+          assign video_id = block.settings.video.id | default: block.settings.video_url.id
+
+          
+            assign textColor = block.settings.textColor
+            assign title =  block.settings.title
+            assign subtitle =  block.settings.subtitle
+            assign content =  block.settings.content
+            assign url =  block.settings.url
+            assign urltext =  block.settings.urltext 
+            assign padding =  block.settings.padding 
+            assign align =  block.settings.align
+            
+          %}
+            {% case block.type %}
+              
+            {% when 'image' %}
+               {%  unless media == empty %}
+                 <a href="{{ block.settings.link }}">
+               <div class="link_image"> 
+                 {{ media | img_url: 'master' | img_tag }} 
+               </div>
+                 </a> 
+
+                 <style>
+                 #shopify-section-{{ section.id }} .link_image{
+                   max-width:{{block.settings.imgwidth}};
+                   width:100%;
+                   margin:0px auto;
+                 }
+                 
+                 </style>
+              {% endunless %}
+              
+              {% when 'subtitle' %}
+              <h5 class="subtitle">{{ subtitle }}</h5>
+              {% when 'title' %}
+              <h2>{{ title }}</h2>
+              {% when 'content' %}
+              <div class="content">
+                <p>{{ content }}</p>
+              </div>
+              {% when 'link' %} 
+                <a class="btn" href="{{ url }}"><span>{{ urltext }}</span></a>
+              {% when 'style' %} 
+              <style>
+                #shopify-section-{{ section.id }} .blockStyle{
+                  padding:{{padding}};
+                  {% if align == true %}
+                    text-align:center;
+                  {% endif %}
+                  
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  gap: 15px;
+                  justify-content: center;
+                  
+                }
+                #shopify-section-{{ section.id }} .blockStyle h2{
+                  font-size:60px;
+                  font-weight:700;
+                  line-height:120%;
+                    margin: 0;
+                }
+                #shopify-section-{{ section.id }} .blockStyle h2,
+                #shopify-section-{{ section.id }} .blockStyle p,
+                #shopify-section-{{ section.id }} .blockStyle p ul li,
+                #shopify-section-{{ section.id }} .blockStyle h1{
+                  color:{{textColor}};
+                   
+                }
+                
+                 
+                @media(max-width:767px){
+                  #shopify-section-{{ section.id }} .blockStyle{
+                    padding:30px 20px;
+                  }
+               #shopify-section-{{ section.id }} .blockStyle h2{
+                  font-size:28px;
+                   
+                }
+ 
+                }
+              </style>
+
+              {% when "box" %}
+
+              <div class="main_box {{ block.id }}">
+                <h3>{{ block.settings.title }}</h3>
+                 <h4>{{ block.settings.subtitle }}</h4>
+                 <p>{{ block.settings.des }}</p>
+                {% if block.settings.url != blank %}
+                    <a class="btn" href="{{ block.settings.url }}"><span>{{ block.settings.btntext }}</span></a>
+                 {% endif %}
+                
+              </div>
+
+              <style>
+        #shopify-section-{{ section.id }} .{{block.id}} {
+            padding:50px 100px;
+          margin:0px auto 16px auto;
+          max-width:760px;
+          width:100%;
+          background:{{block.settings.bg}};
+          border-radius: 10px;
+           text-align: center;
+        }
+         #shopify-section-{{ section.id }} .{{block.id}}  h3{
+                  font-size:24px;
+            font-family:poppins;
+                  font-weight:600;
+                  line-height:130%;
+                    margin: 0px 0px 15px 0px;
+           letter-spacing:normal;
+           color:{{block.settings.textcolor}};
+        }
+         #shopify-section-{{ section.id }} .{{block.id}}  h4{
+                     font-size:16px;
+            font-family:poppins;
+                  font-weight:600;
+                  line-height:150%;
+                    margin: 0px 0px 20px 0px;
+           letter-spacing:0.6px;
+           color:{{block.settings.textcolor}};
+        }
+           #shopify-section-{{ section.id }} .{{block.id}}  p{
+                            font-size:14px;
+            font-family:poppins;
+                  font-weight:400;
+                  line-height:150%;
+                    margin: 0px 0px 20px 0px;
+           letter-spacing:0.6px;
+             color:{{block.settings.textcolor}};
+        }
+         #shopify-section-{{ section.id }} .{{block.id}}  .btn, #shopify-section-{{ section.id }} .{{block.id}}  .btn:hover{
+           background:{{block.settings.textcolor}};
+           width:100%;
+            color:{{block.settings.bg}};
+        }
+      #shopify-section-{{ section.id }} {{block.id}}  .btn span{
+           color:{{block.settings.bg}};
+        }
+   @media(max-width:767px){
+
+        #shopify-section-{{ section.id }} .{{block.id}} {
+            padding:50px 10px 20px;
+          margin:0px auto 20px auto;
+        }
+         #shopify-section-{{ section.id }} .{{block.id}}  h3{
+                  font-size:20px;
+        }
+         #shopify-section-{{ section.id }} .{{block.id}}  h4{
+                     font-size:14px;
+            font-family:poppins;
+                  font-weight:600;
+                  line-height:150%;
+                    margin: 0px 0px 20px 0px;
+           letter-spacing:0.6px;
+           color:{{block.settings.textcolor}};
+        }
+         
+
+
+     
+   }
+              </style>
+
+
+              
+            {% endcase %}
+          {% endfor %}
+        </div>
+        
+        
+      </div>
+    </div>
+</section>
+
+
+{% schema %}
+  {
+    "name": "Home Review",
+    "settings": [ 
+      {
+        "type": "select",
+        "label": "Section",
+        "id": "width",
+        "options":[
+          {"value":"container","label": "Container"},
+          {"value":"container-full","label": "Container Full"}
+        ]
+      },
+      {
+        "type": "color",
+        "label": "Section Color",
+        "id": "color" 
+      },
+      {
+        "type": "header",
+        "content": "Section Padding"
+      },
+      {
+        "type": "range",
+        "label": "Top",
+        "id": "top",
+         "min":0,
+        "max":200,
+        "step": 5,
+        "default":0
+      },
+      {
+        "type": "range",
+        "label": "Bottom",
+        "id": "bottom",
+         "min":0,
+        "max":200,
+        "step": 5,
+        "default":0
+      },
+      {
+        "type": "range",
+        "label": "Left",
+        "id": "left",
+         "min":0,
+        "max":200,
+        "step": 5,
+        "default":0
+      },
+      {
+        "type": "range",
+        "label": "Right",
+        "id": "right",
+         "min":0,
+        "max":200,
+        "step": 5,
+        "default":0
+      }
+    ],
+    "blocks":[
+      {
+        "type": "image",
+        "name":"Image",
+        "settings": [
+            {
+              "type": "image_picker",
+              "label": "Image",
+              "id": "image" 
+            },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Link"
+          },
+          {
+            "type": "text",
+            "id": "imgwidth",
+            "label": "Image Width(300px)",
+            "default":"300px"
+          }
+        ] 
+      },
+      {
+        "type": "subtitle",
+        "name":"Sub Title",
+        "settings": [
+          {
+            "type": "text",
+            "label": "Title",
+            "id": "subtitle",
+            "default":"Drive More Conversions with AI-Optimized Landing Pages"
+          }
+        ] 
+      },
+      {
+        "type": "title",
+        "name":"Title",
+        "settings": [
+          {
+            "type": "text",
+            "label": "Title",
+            "id": "title",
+            "default":"Drive More Conversions with AI-Optimized Landing Pages"
+          }
+        ] 
+      },
+      {
+        "type": "content",
+        "name":"Content",
+        "settings": [
+          {
+            "type": "textarea",
+            "label": "Content",
+            "id": "content",
+            "default":"Personalized customer journeys from click to conversion with the power of AI and A/B testing"
+          }
+        ] 
+      },
+      {
+        "type": "box",
+        "name":"Box",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default":"Are you an Agency?"
+          },
+            {
+            "type": "text",
+            "id": "subtitle",
+            "label": "Sub Title",
+            "default":"We have packages that help you get to your goals faster."
+          },
+           {
+            "type": "textarea",
+            "id": "des",
+            "label": "Description",
+            "default":"For pricing, revenue share information, and packages contact."
+          },
+            {
+            "type": "text",
+            "id": "btntext",
+            "label": "Button Text",
+            "default":"Have Chat"
+          }, {
+            "type": "url",
+            "label": "Button URL",
+            "id": "url" 
+          },
+          {
+            "type": "color",
+            "id": "bg",
+            "label": "Background Color",
+            "default":"#333333"
+          },
+           {
+            "type": "color",
+            "id": "textcolor",
+            "label": "Background Color",
+            "default":"#ffffff"
+          }
+          
+        ]
+      },
+      
+      {
+        "type": "link",
+        "name":"Link",
+        "settings": [
+          {
+            "type": "url",
+            "label": "URL",
+            "id": "url" 
+          },
+          {
+            "type": "text",
+            "label": "Button Text",
+            "id": "urltext",
+            "default":"Increase My Conversions"
+          }
+        ] 
+      } ,
+      {
+        "type": "style",
+        "name":"Style",
+        "settings": [
+          {
+            "type": "text",
+            "label": "Padding",
+            "id": "padding" 
+          }, 
+          {
+            "type": "color",
+            "id": "textColor",
+            "label": "Text Color" 
+          }, 
+          
+          {
+            "type": "checkbox",
+            "label": "Text Align",
+            "id": "align"
+             
+          }
+        ] 
+      } 
+    ],
+    "presets": [
+      {
+        "name":"Home Review"
+      }
+    ]
+  }
+{% endschema %}
+ 

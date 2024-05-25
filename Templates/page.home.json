@@ -1,0 +1,1715 @@
+{
+    "sections": {
+      "main": {
+        "type": "main-page",
+        "disabled": true,
+        "settings": {
+          "padding_top": 36,
+          "padding_bottom": 36
+        }
+      },
+      "zegsu-header-bar": {
+        "type": "apps",
+        "disabled": true,
+        "settings": {
+          "include_margins": true
+        }
+      },
+      "home_hero_DxdGkE": {
+        "type": "home-hero",
+        "blocks": {
+          "image_FVpfai": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/472241699419063450-9cc0f01c-a796-4659-b155-55e0c161e903.png"
+            }
+          },
+          "title_UHLGpk": {
+            "type": "title",
+            "settings": {
+              "title": "Drive More Conversions with AI-Optimized Landing Pages"
+            }
+          },
+          "content_WVhG7A": {
+            "type": "content",
+            "settings": {
+              "content": "Personalized customer journeys from click to conversion with the power of AI and A\/B testing"
+            }
+          },
+          "link_Gr6WLA": {
+            "type": "link",
+            "settings": {
+              "url": "#package",
+              "urltext": "Increase My Conversions"
+            }
+          },
+          "style_N4c3Bg": {
+            "type": "style",
+            "settings": {
+              "padding": "30px 5%",
+              "textColor": "",
+              "align": true
+            }
+          }
+        },
+        "block_order": [
+          "image_FVpfai",
+          "title_UHLGpk",
+          "content_WVhG7A",
+          "link_Gr6WLA",
+          "style_N4c3Bg"
+        ],
+        "settings": {
+          "width": "container-full",
+          "color": "#ffffff",
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0
+        }
+      },
+      "home_video_BRLRXG": {
+        "type": "home-video",
+        "blocks": {
+          "subtitle_79QkbT": {
+            "type": "subtitle",
+            "settings": {
+              "subtitle": "Simplify the buying process and increase conversions"
+            }
+          },
+          "title_aKLf7w": {
+            "type": "title",
+            "settings": {
+              "title": "First impressions matter",
+              "fontsize": 60,
+              "lmargin": 0,
+              "mmargin": 0
+            }
+          },
+          "content_N9bYVq": {
+            "type": "content",
+            "settings": {
+              "content": "Your potential customers expect your brand's first impression to be relevant to their needs–it can make them buy or bounce. ShopLandingAI creates personalized landing pages that match your ads. \n<br>\n<br>\nShopLandingAI speeds up conversions by giving each customer the journey they need."
+            }
+          },
+          "link_qGJMjC": {
+            "type": "link",
+            "disabled": true,
+            "settings": {
+              "url": "",
+              "urltext": "Increase My Conversions"
+            }
+          },
+          "video_WiRpfY": {
+            "type": "video",
+            "settings": {
+              "video_url": "https:\/\/youtu.be\/-zc6CyGKqE4?list=TLGGxQ7UpMN0E5sxNDA1MjAyNA",
+              "enable_video_looping": true
+            }
+          },
+          "style_4UmfHh": {
+            "type": "style",
+            "settings": {
+              "padding": "",
+              "textColor": "#ffffff",
+              "align": true
+            }
+          }
+        },
+        "block_order": [
+          "subtitle_79QkbT",
+          "title_aKLf7w",
+          "content_N9bYVq",
+          "link_qGJMjC",
+          "video_WiRpfY",
+          "style_4UmfHh"
+        ],
+        "settings": {
+          "width": "container",
+          "color": "#262420",
+          "top": 55,
+          "bottom": 55,
+          "left": 0,
+          "right": 0
+        }
+      },
+      "home_list_box_6diTf8": {
+        "type": "home-list-box",
+        "blocks": {
+          "title_NGmiYJ": {
+            "type": "title",
+            "settings": {
+              "title": "ShopLandingAI makes conversions <br> as easy as 1-2-3",
+              "textcolor": "#000000",
+              "top": 0,
+              "bottom": 70
+            }
+          },
+          "box_cEw4iL": {
+            "type": "box",
+            "settings": {
+              "numberid": "1",
+              "boxtitle": "We connect your brand to customers better.",
+              "boxdes": "At ShopLandingAI, we create pages that share your story better than a website. Customers convert when they see how a product is relevant to their lives. Making a deeper connection on first click makes lifelong customers."
+            }
+          },
+          "box_VcDebk": {
+            "type": "box",
+            "settings": {
+              "numberid": "2",
+              "boxtitle": "We use data to improve your approach and message",
+              "boxdes": "The ShopLandingAI team leverages data know-how to iterate and optimize pages based on concrete knowledge."
+            }
+          },
+          "box_XWDtjk": {
+            "type": "box",
+            "settings": {
+              "numberid": "3",
+              "boxtitle": "We do all the work",
+              "boxdes": "You want to run your business. We take over all the hard work of design, development, and data-analysis. We make it easy for you to focus on your business."
+            }
+          }
+        },
+        "block_order": [
+          "title_NGmiYJ",
+          "box_cEw4iL",
+          "box_VcDebk",
+          "box_XWDtjk"
+        ],
+        "settings": {
+          "width": "container",
+          "color": "#ffffff",
+          "boxbg": "#333333",
+          "boxt": "#ffffff",
+          "boxn": "#4ea2b2",
+          "top": 40,
+          "bottom": 40,
+          "left": 0,
+          "right": 0
+        }
+      },
+      "home_slider_kM6P66": {
+        "type": "home-slider",
+        "blocks": {
+          "subtitle_wAAFbj": {
+            "type": "subtitle",
+            "settings": {
+              "subtitle": "ShopLandingAI success stories"
+            }
+          },
+          "title_t8cW83": {
+            "type": "title",
+            "settings": {
+              "title": "Case studies"
+            }
+          },
+          "style_b7wzLe": {
+            "type": "style",
+            "settings": {
+              "padding": "0px 0px 50px 0px",
+              "textColor": "",
+              "align": true
+            }
+          },
+          "slider_3TEppf": {
+            "type": "slider",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/472241699419063450-3fff34e0-0129-46b1-8ea5-a56695c7d2d3.png",
+              "title": "Pike Trail",
+              "link": "https:\/\/cdn.shopify.com\/s\/files\/1\/0767\/5887\/6448\/files\/CaseStudies_PikeTrails.pdf",
+              "des": "Outdoor hiking goods company with great product and very poor conversions from ads",
+              "number1": "2X",
+              "numbertext1": "Session Engagement",
+              "number2": "500%",
+              "numbertext2": "Increase in ROAS"
+            }
+          },
+          "slider_jR7tyq": {
+            "type": "slider",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/472241699419063450-2d3e31ad-95b2-4d59-b876-4a0376da03f0.png",
+              "title": "Project: Life",
+              "link": "https:\/\/cdn.shopify.com\/s\/files\/1\/0767\/5887\/6448\/files\/CaseStudies_ProjectLife.pdf",
+              "des": "Fertility company with 40 years of experience and 75% success rate but very poor conversions",
+              "number1": "45%",
+              "numbertext1": "Deeper scroll depth",
+              "number2": "10%",
+              "numbertext2": "Increase in Conversions"
+            }
+          },
+          "slider_wnddjY": {
+            "type": "slider",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/472241699419063450-5a109121-8e28-4221-a6e2-9f3673b51c7a.jpg",
+              "title": "Espin",
+              "link": "https:\/\/cdn.shopify.com\/s\/files\/1\/0767\/5887\/6448\/files\/EspinCaseStudy.pdf",
+              "des": "Espin sought to expand to new audiences but didn't know how. ShopLandingAI analyzed the market and helped bring in seniors--vastly expanding their reach.",
+              "number1": "74%",
+              "numbertext1": "Increase in conversion rate (a user landing on the site and checking out)",
+              "number2": "32%",
+              "numbertext2": "Decrease in cost of customer acquisition, while also lowering the time to purchase."
+            }
+          },
+          "slider_PkVxj6": {
+            "type": "slider",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/472241699419063450-4dbb3d6d-d6df-47cf-9f4a-23f97430b5ab_24079355-9f8f-4f15-b81a-3eb2866d1861.png",
+              "title": "Walkee Paws",
+              "link": "https:\/\/cdn.shopify.com\/s\/files\/1\/0767\/5887\/6448\/files\/CaseStudies_WalkeePaws.pdf",
+              "des": "Dog shoe company with great product and",
+              "number1": "25%",
+              "numbertext1": "Decrease in Bounce Rate",
+              "number2": "2X",
+              "numbertext2": "Increase in ATC"
+            }
+          },
+          "slider_RxiLmn": {
+            "type": "slider",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/472241699419063450-3ba20f1f-912e-4a3b-ab23-79f3d88201c0_0745a70d-1569-41a6-a7e6-30dad79a08c4.png",
+              "title": "Hi Fi Centre",
+              "link": "https:\/\/cdn.shopify.com\/s\/files\/1\/0767\/5887\/6448\/files\/CaseStudies_Hi_Fi_1.pdf",
+              "des": "High-end audio equipment company with great products. They had stopped running ads because the ROAS wasn’t profitable.",
+              "number1": "5X",
+              "numbertext1": "Session Engagement",
+              "number2": "11X",
+              "numbertext2": "Increase in ROAS"
+            }
+          },
+          "slider_tzWgxf": {
+            "type": "slider",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/472241699419063450-e5a45e5a-7d59-4c05-9465-b6ed20772f77_0603f8b7-dfd5-4603-aa7f-b64ef9dc2e59.png",
+              "title": "Pyramid Putters",
+              "link": "https:\/\/cdn.shopify.com\/s\/files\/1\/0767\/5887\/6448\/files\/CaseStudies_Pyramid.pdf",
+              "des": "Golf company with great product and very poor conversions from ads",
+              "number1": "3X",
+              "numbertext1": "Session Engagement",
+              "number2": "10%",
+              "numbertext2": "Increase in Conversion Rates"
+            }
+          },
+          "slider_Ccenen": {
+            "type": "slider",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/472241699419063450-baf5e589-315c-459b-a4b7-bd2b93983386_410e76b5-a48d-40b5-9ecf-032b7ad53f79.png",
+              "title": "MudMixer",
+              "link": "https:\/\/cdn.shopify.com\/s\/files\/1\/0767\/5887\/6448\/files\/CaseStudies_Mudmixer_1.pdf",
+              "des": "Construction company with great product and very poor conversions from ads.",
+              "number1": "3X",
+              "numbertext1": "Session Engagement",
+              "number2": "1.3X",
+              "numbertext2": "Increase in Conversion Rate"
+            }
+          },
+          "slider_dHKpk8": {
+            "type": "slider",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/472241699419063450-905d007b-063c-4afa-858e-c217ffb4e05e_405f3fb4-4cad-4f01-bb70-040a2a52f976.png",
+              "title": "My PadL",
+              "link": "https:\/\/cdn.shopify.com\/s\/files\/1\/0767\/5887\/6448\/files\/CaseStudies_MyPadL.pdf",
+              "des": "Paddle ball accessory company has a niche product and poor conversions from ads.",
+              "number1": "5X",
+              "numbertext1": "Session Engagement",
+              "number2": "10X",
+              "numbertext2": "Increase in Conversion Rate"
+            }
+          },
+          "slider_E9gk6H": {
+            "type": "slider",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/472241699419063450-0f925da5-2cb4-41e6-a6b6-ceb0c3021bd2_efe2e1fd-12cb-48b7-934c-ee447d5afbe9.png",
+              "title": "MudMixer",
+              "link": "https:\/\/cdn.shopify.com\/s\/files\/1\/0767\/5887\/6448\/files\/CaseStudies_MudmixerPersona_2.pdf",
+              "des": "Company with a product aimed at construction professionals had 40% consumers who identified as hobbyists and female.",
+              "number1": "10X",
+              "numbertext1": "Session Engagement",
+              "number2": "13X",
+              "numbertext2": "Increase in ROAS"
+            }
+          }
+        },
+        "block_order": [
+          "subtitle_wAAFbj",
+          "title_t8cW83",
+          "style_b7wzLe",
+          "slider_3TEppf",
+          "slider_jR7tyq",
+          "slider_wnddjY",
+          "slider_PkVxj6",
+          "slider_RxiLmn",
+          "slider_tzWgxf",
+          "slider_Ccenen",
+          "slider_dHKpk8",
+          "slider_E9gk6H"
+        ],
+        "settings": {
+          "width": "container",
+          "color": "#ffffff",
+          "boxtextcolor": "#000000",
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0
+        }
+      },
+      "home_packages_acPXEN": {
+        "type": "home-packages",
+        "blocks": {
+          "title_BVbe9K": {
+            "type": "title",
+            "settings": {
+              "title": "The ShopLandingAI Solution",
+              "subtitle": "The Packages",
+              "textcolor": "#000000",
+              "top": 0,
+              "bottom": 35
+            }
+          },
+          "package_AgXG48": {
+            "type": "package",
+            "settings": {
+              "numberid": "Pagebuilder Pro",
+              "boxtitle": "Provide a Better Customer Journey",
+              "description": "For Smaller Brands <br> Outcome: Improved Customer Journey",
+              "price": "$1,500",
+              "priceper": "",
+              "duration": "One-Time Purchase",
+              "btntext": "Increase Conversions",
+              "url": "https:\/\/shoplanding.ai\/products\/pagebuilder-pro",
+              "content": "<ul><li>1 Custom Built Landing Pages <\/li><\/ul>"
+            }
+          },
+          "package_nf7Ugz": {
+            "type": "package",
+            "settings": {
+              "numberid": "Conversion Complete",
+              "boxtitle": "Get More Sales from Existing Traffic",
+              "description": "For Brands Who Want to Improve Conversion Rates<br>\nOutcome: Improved Conversion Rate by 30%",
+              "price": "$2,500",
+              "priceper": "Month",
+              "duration": "for 3 Month Project",
+              "btntext": "Make Profits Skyrocket",
+              "url": "https:\/\/shoplanding.ai\/products\/conversion-complete-subscription",
+              "content": "<ul><li>3 Custom Built Landing Pages <\/li><li>Three Months of A\/B Testing<\/li><li>Unlimited new iterations of pages created during test period using AI hypothesis analysis and development  (every 1,000 visitors)<\/li><\/ul>"
+            }
+          },
+          "package_rnibYe": {
+            "type": "package",
+            "settings": {
+              "numberid": "Audience Architect",
+              "boxtitle": "Discover High-Converting Audience Segments & Get More Sales from New and Existing Traffic",
+              "description": "For Growth-Focused Brands who Want to Expand their Customer Base<br>\nOutcome: New audiences to expand to with potential to be 25% of sales",
+              "price": "$4,000",
+              "priceper": "Month",
+              "duration": "for 3 Month Project",
+              "btntext": "Optimize Audience Reach",
+              "url": "https:\/\/shoplanding.ai\/products\/audience-architect-subscription",
+              "content": "<ul><li>5 Custom Built Landing pages<\/li><li>Three Months of A\/B Testing <\/li><li>Unlimited new iterations of pages created during test period using AI hypothesis analysis and development  (every 1,000 visitors)<\/li><li>Get AI-powered analysis of customer data to discover new, valuable audience groups.<\/li><li>Benefit from UX researcher-led interviews for deeper insights into audience segments, aiding in the creation of effective marketing strategies.<\/li><li>Enjoy tailored messaging for identified audience segments to dramatically improve engagement and conversions.<\/li><\/ul>"
+            }
+          }
+        },
+        "block_order": [
+          "title_BVbe9K",
+          "package_AgXG48",
+          "package_nf7Ugz",
+          "package_rnibYe"
+        ],
+        "settings": {
+          "width": "container",
+          "color": "#ffffff",
+          "boxbg": "#333333",
+          "boxt": "#ffffff",
+          "boxn": "#4ea2b2",
+          "top": 50,
+          "bottom": 50,
+          "left": 0,
+          "right": 0
+        }
+      },
+      "home_review_mFEdbJ": {
+        "type": "home-review",
+        "blocks": {
+          "box_qnzV9A": {
+            "type": "box",
+            "settings": {
+              "title": "Are you an Agency?",
+              "subtitle": "We have packages that help you get to your goals faster.",
+              "des": "For pricing, revenue share information, and packages contact.",
+              "btntext": "Have Chat",
+              "url": "https:\/\/calendly.com\/john-baotris\/shoplandingai-intro-agency",
+              "bg": "#333333",
+              "textcolor": "#ffffff"
+            }
+          },
+          "image_7CaeYV": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/gempages_472241699419063450-1fbaaa5c-0cb0-4004-a660-fafbd6f4f944_bcb60828-3fc7-444e-993c-ee0e7aa2130d.png",
+              "link": "https:\/\/www.trustpilot.com\/review\/shoplanding.ai",
+              "imgwidth": "300px"
+            }
+          }
+        },
+        "block_order": [
+          "box_qnzV9A",
+          "image_7CaeYV"
+        ],
+        "settings": {
+          "width": "container",
+          "color": "#ffffff",
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0
+        }
+      },
+      "home_video_Yx8fKn": {
+        "type": "home-video",
+        "blocks": {
+          "subtitle_iNtGea": {
+            "type": "subtitle",
+            "settings": {
+              "subtitle": "ShopLandingAI delivers"
+            }
+          },
+          "title_WjcHbC": {
+            "type": "title",
+            "settings": {
+              "title": "Customers Love ShopLandingAI ",
+              "fontsize": 50,
+              "lmargin": 40,
+              "mmargin": 30
+            }
+          },
+          "video_jDTTk7": {
+            "type": "video",
+            "settings": {
+              "video_url": "https:\/\/youtu.be\/mdxWkuMlR98",
+              "enable_video_looping": false
+            }
+          },
+          "style_46ip3F": {
+            "type": "style",
+            "settings": {
+              "padding": "40px 0px",
+              "textColor": "",
+              "align": true
+            }
+          }
+        },
+        "block_order": [
+          "subtitle_iNtGea",
+          "title_WjcHbC",
+          "video_jDTTk7",
+          "style_46ip3F"
+        ],
+        "settings": {
+          "width": "container",
+          "color": "#ffffff",
+          "top": 90,
+          "bottom": 0,
+          "left": 0,
+          "right": 0
+        }
+      },
+      "home_testimonials_XPjD8E": {
+        "type": "home-testimonials",
+        "blocks": {
+          "testimonial_pTNThT": {
+            "type": "testimonial",
+            "settings": {
+              "des": "Thank you guys so much. This audience report was very insightful and very helpful. And I would say that that was certainly worth the cost.",
+              "name": "Jessica Moss",
+              "pos": "Nation Ltd"
+            }
+          },
+          "testimonial_6hTQkz": {
+            "type": "testimonial",
+            "settings": {
+              "des": "This is really interesting because we haven’t had this data in a really organized fashion. We did a little bit of guesswork, but we never built an actual persona for our audience. Now we know that, well, she's 50. She probably stays at home and her household income is pretty high, which allows the 50-year-old to stay home and focus on their health and spend money on health.<br>\n\n\neah, this is all very interesting data, and we certainly have a messaging challenge. I think we can hone in and over the next couple weeks or months unlock those key messages.",
+              "name": "Devin Simmons",
+              "pos": "Dr. Morse's Herbal Health Club"
+            }
+          },
+          "testimonial_Bxym4i": {
+            "type": "testimonial",
+            "settings": {
+              "des": "Thank you so much. A lot to think about a lot of work to do moving forward but it's a good sign that there's so much room to dig deeper and improve our audiences, and go further on every front.",
+              "name": "Nadim Makarem",
+              "pos": "The Valari"
+            }
+          },
+          "button_Ydzpby": {
+            "type": "button",
+            "settings": {
+              "btntext": "Get Started",
+              "btnlink": "https:\/\/calendly.com\/john-baotris\/shoplandingai-intro",
+              "top": 10,
+              "bottom": 50,
+              "texcolorbtn": "#ffffff",
+              "bdbtn": "#262420",
+              "bdbtnhover": "#ffffff",
+              "textbtnhover": "#262420"
+            }
+          }
+        },
+        "block_order": [
+          "testimonial_pTNThT",
+          "testimonial_6hTQkz",
+          "testimonial_Bxym4i",
+          "button_Ydzpby"
+        ],
+        "settings": {
+          "width": "container",
+          "color": "#ffffff",
+          "textcolor": "#000000",
+          "top": 0,
+          "bottom": 0,
+          "left": 0,
+          "right": 0
+        }
+      },
+      "home_image_slider_VyNXkK": {
+        "type": "home-image-slider",
+        "blocks": {
+          "image_7DBcJU": {
+            "type": "image",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/472241699419063450-73915b05-2e05-46f6-9de2-18c0b614718d.png"
+            }
+          },
+          "image_UKG3LG": {
+            "type": "image",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/472241699419063450-e2f56db9-b203-4aff-a024-3f2c59215761.png"
+            }
+          },
+          "image_Ethier": {
+            "type": "image",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/472241699419063450-6ae8fa79-6397-4b93-b6c5-a2256efac5ca.png"
+            }
+          },
+          "image_JNM4d9": {
+            "type": "image",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/472241699419063450-6fd58ddb-0c0c-4ede-9d71-93c3322c8249.png"
+            }
+          },
+          "image_YAH6JP": {
+            "type": "image",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/472241699419063450-7e39db6c-fefc-4d6b-8933-5de6559f09a9.png"
+            }
+          },
+          "image_QKUgfz": {
+            "type": "image",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/472241699419063450-a0862745-f8a5-4d82-83e9-52123cd71bc5.png"
+            }
+          },
+          "image_j6GWm9": {
+            "type": "image",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/472241699419063450-742d87c3-a69a-494a-a61b-7622265fb999.png"
+            }
+          },
+          "image_hfBxxx": {
+            "type": "image",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/472241699419063450-f17aebf8-4173-4312-bfc3-e0275fd7e390.png"
+            }
+          },
+          "image_ac97N7": {
+            "type": "image",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/472241699419063450-6d037047-5117-40ca-9653-9a53dc434c51.png"
+            }
+          },
+          "image_PcPXbT": {
+            "type": "image",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/472241699419063450-7e52db37-3949-4a29-a0bc-91c351069c70.png"
+            }
+          },
+          "image_BhCtpT": {
+            "type": "image",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/472241699419063450-823572af-1a13-4700-8322-d254dcb99899.png"
+            }
+          },
+          "image_kE6NXh": {
+            "type": "image",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/472241699419063450-3eef7341-8d28-4977-9cc6-358271b9a162.png"
+            }
+          },
+          "image_dEB6BJ": {
+            "type": "image",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/472241699419063450-2c283bda-43b5-4851-8319-7b26a15f7179.png"
+            }
+          },
+          "image_GEA89d": {
+            "type": "image",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/472241699419063450-7f0335c1-b27b-437e-ae25-8128aa0078bf.png"
+            }
+          },
+          "image_iKtCK7": {
+            "type": "image",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/472241699419063450-b21ca181-93d5-4e86-8e18-b5007d243fcc.png"
+            }
+          },
+          "image_Y4gUnf": {
+            "type": "image",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/472241699419063450-7862d521-679a-4a31-87c5-b0a11fc6fcbe.png"
+            }
+          },
+          "image_8WYE4G": {
+            "type": "image",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/472241699419063450-16d1a733-71c1-4af1-a7c8-34b9bdc01c43.png"
+            }
+          },
+          "image_V349ac": {
+            "type": "image",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/472241699419063450-ffaa4ba5-7feb-4f5c-9781-a1920761449e.png"
+            }
+          },
+          "image_rNmgcR": {
+            "type": "image",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/472241699419063450-0c6ad92a-ef5f-4a21-bb45-ce52242f5064.png"
+            }
+          },
+          "image_PYjjep": {
+            "type": "image",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/472241699419063450-61f2a7df-6879-42d8-9b54-2ea7cfb7be31.png"
+            }
+          },
+          "image_mVy6aH": {
+            "type": "image",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/472241699419063450-44bf52bd-10f4-4720-9ff7-f8d992b6e286.png"
+            }
+          },
+          "image_biKpit": {
+            "type": "image",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/472241699419063450-a5f31033-e43b-4ab4-8eca-ad43cf11bac0.png"
+            }
+          },
+          "image_PmYFP7": {
+            "type": "image",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/472241699419063450-09582384-cdd0-42df-99c9-42a40f2f50e1.png"
+            }
+          },
+          "image_mEQjmT": {
+            "type": "image",
+            "settings": {
+              "img": "shopify:\/\/shop_images\/472241699419063450-8949d691-3598-465d-9528-8a48720a3cc2.png"
+            }
+          }
+        },
+        "block_order": [
+          "image_7DBcJU",
+          "image_UKG3LG",
+          "image_Ethier",
+          "image_JNM4d9",
+          "image_YAH6JP",
+          "image_QKUgfz",
+          "image_j6GWm9",
+          "image_hfBxxx",
+          "image_ac97N7",
+          "image_PcPXbT",
+          "image_BhCtpT",
+          "image_kE6NXh",
+          "image_dEB6BJ",
+          "image_GEA89d",
+          "image_iKtCK7",
+          "image_Y4gUnf",
+          "image_8WYE4G",
+          "image_V349ac",
+          "image_rNmgcR",
+          "image_PYjjep",
+          "image_mVy6aH",
+          "image_biKpit",
+          "image_PmYFP7",
+          "image_mEQjmT"
+        ],
+        "settings": {
+          "width": "container",
+          "color": "#ffffff",
+          "lview": 10,
+          "mview": 4,
+          "top": 100,
+          "bottom": 100,
+          "left": 0,
+          "right": 0
+        }
+      },
+      "home_brand_logos_eMBbtK": {
+        "type": "home-brand-logos",
+        "blocks": {
+          "title_DFPPXK": {
+            "type": "title",
+            "settings": {
+              "title": "ShopLandingAI is trusted by agencies and brands alike"
+            }
+          },
+          "style_4HUHii": {
+            "type": "style",
+            "settings": {
+              "padding": "",
+              "textColor": "#ffffff",
+              "align": true
+            }
+          },
+          "image_iB3Cdw": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/472241699419063450-271e2578-b8fe-48e5-88da-29832b81f923.svg",
+              "logowidth": 140
+            }
+          },
+          "image_fhbHQA": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/472241699419063450-16d37787-2978-4160-9527-71cba46c3837.svg",
+              "logowidth": 125
+            }
+          },
+          "image_GpiGzE": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/472241699419063450-4c0a7371-744c-4d8c-ba8e-04c050535d65.svg",
+              "logowidth": 130
+            }
+          },
+          "image_eKh8RX": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/472241699419063450-eac93e50-5850-4434-9ed4-56310cc391bc.svg",
+              "logowidth": 95
+            }
+          },
+          "image_g6U3AW": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/472241699419063450-ba99bce5-0219-46e2-b715-c741fa5135cc.webp",
+              "logowidth": 115
+            }
+          },
+          "image_a7cWMg": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/472241699419063450-9fdf42f8-610e-443c-823c-24210f2cc67d.svg",
+              "logowidth": 155
+            }
+          },
+          "image_7mKKFQ": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/472241699419063450-3823fc4e-d4c5-422a-9dfb-a9d7010eaad1.svg",
+              "logowidth": 170
+            }
+          },
+          "image_KRDawz": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/472241699419063450-db9c0022-365d-4a1a-950b-307f1f875785.svg",
+              "logowidth": 130
+            }
+          },
+          "image_ijtPWR": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/472241699419063450-df7074a3-3123-4426-b6b9-cc3be983cb64.svg",
+              "logowidth": 100
+            }
+          },
+          "image_RNRGzR": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/472241699419063450-bb44df03-95fa-46e2-99b6-e98678045fab.svg",
+              "logowidth": 120
+            }
+          },
+          "image_rmHxiE": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/472241699419063450-b32eae73-a926-4155-a8b9-cc254e9aa941.svg",
+              "logowidth": 100
+            }
+          }
+        },
+        "block_order": [
+          "title_DFPPXK",
+          "style_4HUHii",
+          "image_iB3Cdw",
+          "image_fhbHQA",
+          "image_GpiGzE",
+          "image_eKh8RX",
+          "image_g6U3AW",
+          "image_a7cWMg",
+          "image_7mKKFQ",
+          "image_KRDawz",
+          "image_ijtPWR",
+          "image_RNRGzR",
+          "image_rmHxiE"
+        ],
+        "disabled": true,
+        "settings": {
+          "width": "container",
+          "logoperrow": "col-20",
+          "color": "#3f5147",
+          "top": 50,
+          "bottom": 50,
+          "left": 0,
+          "right": 0
+        }
+      },
+      "home_box_cBDjbY": {
+        "type": "home-box",
+        "blocks": {
+          "subtitle_rEBLkp": {
+            "type": "subtitle",
+            "settings": {
+              "subtitle": "ShopLandingAI delivers"
+            }
+          },
+          "style_h7nknG": {
+            "type": "style",
+            "settings": {
+              "padding": "0px 0px 60px 0px",
+              "textColor": "",
+              "align": true
+            }
+          },
+          "title_a8fD8W": {
+            "type": "title",
+            "settings": {
+              "title": "We get results"
+            }
+          },
+          "box_7wjp8Q": {
+            "type": "box",
+            "settings": {
+              "boxtitle": "44%",
+              "boxdes": "Decrease in cost per acquisition on paid promotions (Facebook & Instagram)"
+            }
+          },
+          "box_QJMeHt": {
+            "type": "box",
+            "settings": {
+              "boxtitle": "34%",
+              "boxdes": "Increase in add to carts from landing page vs product page"
+            }
+          },
+          "box_wMAgzx": {
+            "type": "box",
+            "settings": {
+              "boxtitle": "50%",
+              "boxdes": "Decrease in bounce rate for landing page"
+            }
+          },
+          "box_fdkgPV": {
+            "type": "box",
+            "settings": {
+              "boxtitle": "120%",
+              "boxdes": "Increase in return on ad spend after implementing a landing page"
+            }
+          }
+        },
+        "block_order": [
+          "subtitle_rEBLkp",
+          "style_h7nknG",
+          "title_a8fD8W",
+          "box_7wjp8Q",
+          "box_QJMeHt",
+          "box_wMAgzx",
+          "box_fdkgPV"
+        ],
+        "settings": {
+          "width": "container",
+          "color": "#ffffff",
+          "boxbgcolor": "#262420",
+          "boxtextcolor": "#ffffff",
+          "top": 30,
+          "bottom": 30,
+          "left": 0,
+          "right": 0
+        }
+      },
+      "home_testimonials_WBRzay": {
+        "type": "home-testimonials",
+        "blocks": {
+          "title_XiWGUQ": {
+            "type": "title",
+            "settings": {
+              "title": "Brands & agencies love ShopLandingAI",
+              "textcolor": "#262420",
+              "top": 0,
+              "bottom": 0
+            }
+          },
+          "testimonial_YVECiV": {
+            "type": "testimonial",
+            "settings": {
+              "des": "I love working with the ShopLandingAI team - they are extremely responsive, and have gone above and beyond for me. I'm a data person so having their insights has been incredibly valuable. They are great data driven partners and helped me increase my conversions by over 10% in just a few weeks",
+              "name": "Mike Ye",
+              "pos": "Founder\/CEO, Project: Life",
+              "img": "shopify:\/\/shop_images\/472241699419063450-ee316b6e-9b2d-45c9-b144-788ff33b6fbd.jpg"
+            }
+          },
+          "testimonial_MQtAU9": {
+            "type": "testimonial",
+            "settings": {
+              "des": "The new landing pages from ShopLandingAI have been doing quite well. In the first 21 days, we have seen ROAS improve to 5.12.",
+              "name": "Josh Hendershott",
+              "pos": "Founder\/CEO, Pike Trail",
+              "img": "shopify:\/\/shop_images\/472241699419063450-be62ceb4-1f93-4448-8d20-5d04fccdd35b.webp"
+            }
+          },
+          "testimonial_FmwDk9": {
+            "type": "testimonial",
+            "settings": {
+              "des": "\"We had a few hypotheses why our landing pages weren't converting as they should be. ShopLandingAI was able to test those theories, plus others to get us a 25% increase in revenue\"",
+              "name": "Steven Wang",
+              "pos": "Founder, Meison",
+              "img": "shopify:\/\/shop_images\/472241699419063450-7380ad0d-9bc1-4df5-b910-b69f218b2c82.webp"
+            }
+          },
+          "testimonial_Dm4iTQ": {
+            "type": "testimonial",
+            "settings": {
+              "des": "\"ShopLandingAI's prowess in creating an immersive landing page propelled our debut women's collection to new heights. The results were astonishing: a threefold surge in conversions, massive traffic influx, and a substantial boost in our brand visibility and engagement.\"",
+              "name": "Motoo Noda",
+              "pos": "Co-Founder &amp; CFO, Banks Journal",
+              "img": "shopify:\/\/shop_images\/472241699419063450-b46b4878-7bc2-48be-843b-09f394487440.webp"
+            }
+          },
+          "testimonial_8n9HWf": {
+            "type": "testimonial",
+            "settings": {
+              "des": "\"Now, after working with ShopLandingAI, every decision in the company is based on data - what we know the customers want. They will make you not leave money on the table\"",
+              "name": "Daniela Vianna",
+              "pos": "CEO, Ephemeris",
+              "img": "shopify:\/\/shop_images\/472241699419063450-2654caf3-c035-463e-a88e-baa908fc67ad.gif"
+            }
+          },
+          "testimonial_BgYLTp": {
+            "type": "testimonial",
+            "settings": {
+              "des": "\"ShopLandingAI doesn't just build landing pages; they enable us as an agency to work more effectively for our clients. Without having to wait for the clients to build new product and collections pages, we can deploy highly targeted, data-driven campaigns faster and at scale. They're a game-changing partner for any serious digital marketing agency.\"",
+              "name": "Ken Kao",
+              "pos": "RevEngine Digital Marketing",
+              "img": "shopify:\/\/shop_images\/472241699419063450-ae821f25-ff8c-4ebd-8c4f-afc04c555af2_1_1.png"
+            }
+          },
+          "testimonial_B3TNtq": {
+            "type": "testimonial",
+            "settings": {
+              "des": "\"Landing pages are often overlooked in digital marketing. Companies spend big on ads and social campaigns only to direct traffic to a generic page, diluting the potential for conversion. ShopLandingAI bridges that critical gap. They not only design landing pages that are laser-focused on specific campaigns but also enable clients to use A\/B testing to optimize their performance. This is a central piece to my client's conversion strategies\"",
+              "name": "Brenda Ton",
+              "pos": "BT LLC",
+              "img": "shopify:\/\/shop_images\/472241699419063450-11d70f98-547a-4bf8-bce5-5397e24b442a.png"
+            }
+          },
+          "button_nxd8Hn": {
+            "type": "button",
+            "settings": {
+              "btntext": "Get Started",
+              "btnlink": "https:\/\/calendly.com\/john-baotris\/shoplandingai-intro",
+              "top": 10,
+              "bottom": 30,
+              "texcolorbtn": "#ffffff",
+              "bdbtn": "#252525",
+              "bdbtnhover": "#ffffff",
+              "textbtnhover": "#252525"
+            }
+          }
+        },
+        "block_order": [
+          "title_XiWGUQ",
+          "testimonial_YVECiV",
+          "testimonial_MQtAU9",
+          "testimonial_FmwDk9",
+          "testimonial_Dm4iTQ",
+          "testimonial_8n9HWf",
+          "testimonial_BgYLTp",
+          "testimonial_B3TNtq",
+          "button_nxd8Hn"
+        ],
+        "settings": {
+          "width": "container",
+          "color": "#ffffff",
+          "textcolor": "#000000",
+          "top": 80,
+          "bottom": 80,
+          "left": 0,
+          "right": 0
+        }
+      },
+      "home_card_box_jeb7nM": {
+        "type": "home-card-box",
+        "blocks": {
+          "cardbox_4Mn97j": {
+            "type": "cardbox",
+            "settings": {
+              "title": "Make your ads more relevant",
+              "des": "ShopLandingAI turns clicks into conversions by removing friction and giving your customers what they're looking for.",
+              "btntext": "Increase Conversions Today",
+              "btnlink": "#package",
+              "bgcolor": "#d9a057",
+              "textcolor": "#272620",
+              "texcolorbtn": "#272620",
+              "bdbtn": "#ffffff",
+              "bdbtnhover": "#4ea2b2",
+              "textbtnhover": "#ffffff"
+            }
+          },
+          "cardbox_nJdE4d": {
+            "type": "cardbox",
+            "settings": {
+              "title": "Book a demo with us",
+              "des": "Schedule time to discuss how ShopLandingAI could supercharge your marketing needs.",
+              "btntext": "Contact Us",
+              "btnlink": "https:\/\/calendly.com\/john-baotris\/shoplandingai-intro?month=2024-05",
+              "bgcolor": "#4ea2b2",
+              "textcolor": "#ffffff",
+              "texcolorbtn": "#272620",
+              "bdbtn": "#ffffff",
+              "bdbtnhover": "#d9a057",
+              "textbtnhover": "#ffffff"
+            }
+          }
+        },
+        "block_order": [
+          "cardbox_4Mn97j",
+          "cardbox_nJdE4d"
+        ],
+        "settings": {
+          "width": "container",
+          "color": "#efecec",
+          "top": 60,
+          "bottom": 80,
+          "left": 0,
+          "right": 0
+        }
+      },
+      "home_brand_logos_Uk8QPB": {
+        "type": "home-brand-logos",
+        "blocks": {
+          "title_TitNTA": {
+            "type": "title",
+            "settings": {
+              "title": "ShopLandingAI is trusted by agencies and brands alike"
+            }
+          },
+          "style_4FkgEQ": {
+            "type": "style",
+            "settings": {
+              "padding": "",
+              "textColor": "#4ea2b2",
+              "align": true
+            }
+          },
+          "image_hGHKNN": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/472241699419063450-271e2578-b8fe-48e5-88da-29832b81f923.svg",
+              "logowidth": 150
+            }
+          },
+          "image_WzVLNA": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/472241699419063450-16d37787-2978-4160-9527-71cba46c3837.svg",
+              "logowidth": 100
+            }
+          },
+          "image_yPWqNd": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/472241699419063450-4c0a7371-744c-4d8c-ba8e-04c050535d65.svg",
+              "logowidth": 200
+            }
+          },
+          "image_hHHEke": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/472241699419063450-eac93e50-5850-4434-9ed4-56310cc391bc.svg",
+              "logowidth": 100
+            }
+          },
+          "image_M6BaQf": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/472241699419063450-ba99bce5-0219-46e2-b715-c741fa5135cc.webp",
+              "logowidth": 120
+            }
+          },
+          "image_CAPJNh": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/472241699419063450-9fdf42f8-610e-443c-823c-24210f2cc67d.svg",
+              "logowidth": 150
+            }
+          },
+          "image_EiFKRQ": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/472241699419063450-3823fc4e-d4c5-422a-9dfb-a9d7010eaad1.svg",
+              "logowidth": 150
+            }
+          },
+          "image_qGCGfG": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/472241699419063450-db9c0022-365d-4a1a-950b-307f1f875785.svg",
+              "logowidth": 105
+            }
+          },
+          "image_LACfi3": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/472241699419063450-cc46ec87-1ecf-4f93-a4ad-0bb7bff56fa2.png",
+              "logowidth": 80
+            }
+          },
+          "image_eKAkeB": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/472241699419063450-df7074a3-3123-4426-b6b9-cc3be983cb64.svg",
+              "logowidth": 95
+            }
+          },
+          "image_Y7eJXB": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/472241699419063450-bb44df03-95fa-46e2-99b6-e98678045fab.svg",
+              "logowidth": 300
+            }
+          },
+          "image_xFHR4M": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/472241699419063450-24e98a3e-b471-4925-8625-dd7dbcb2df49.jpg",
+              "logowidth": 65
+            }
+          },
+          "image_LabLTM": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/472241699419063450-b32eae73-a926-4155-a8b9-cc254e9aa941.svg",
+              "logowidth": 150
+            }
+          },
+          "image_BaXEKd": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/472241699419063450-f9c7085d-4649-43c2-9fe4-ce5d3550b8ea_111450de-cd2d-4c09-8a2e-76e978bdcb9d.svg",
+              "logowidth": 150
+            }
+          },
+          "image_XUTBf8": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/472241699419063450-f5e98ac7-c0c4-4034-b59c-36191b33b874_741c51df-a285-4b43-9185-65ba3e79849c.svg",
+              "logowidth": 150
+            }
+          },
+          "image_zRpfNX": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/472241699419063450-35b12cc2-a200-49a8-b20f-40c64b305c70.svg",
+              "logowidth": 100
+            }
+          },
+          "image_wFjMqX": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/472241699419063450-d6904afc-8247-4005-b09e-0ee675b41c1e.svg",
+              "logowidth": 150
+            }
+          },
+          "image_bWHfpi": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/472241699419063450-d6f99bb1-0cf7-45be-9062-18d98d30ddfe.svg",
+              "logowidth": 80
+            }
+          },
+          "image_YLgWiF": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/472241699419063450-5d718227-af78-4d73-a0dd-970f26c1f041_3fc87bf7-3917-4bdb-8140-b4f50ef9132f.svg",
+              "logowidth": 300
+            }
+          },
+          "image_b8tNc7": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/472241699419063450-2518e9e0-9b31-4d41-b31d-fd4ebdf18f59.svg",
+              "logowidth": 100
+            }
+          },
+          "image_ANGKRE": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/472241699419063450-df37c7c0-57f6-41d3-9b4a-d7e9e40c6987.svg",
+              "logowidth": 300
+            }
+          },
+          "image_mAkhiD": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/472241699419063450-f9ea92cc-2aaf-4392-88c9-77ec8294faf0.svg",
+              "logowidth": 100
+            }
+          },
+          "image_Npjex6": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/472241699419063450-f72232c4-d590-4439-a23e-0ea5c96ce14f.svg",
+              "logowidth": 100
+            }
+          },
+          "image_kLGAfr": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/472241699419063450-1455838e-27a6-4c9d-b8b6-92116f8144d2.png",
+              "logowidth": 70
+            }
+          },
+          "image_QtFxEP": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/472241699419063450-3f3c8f97-664b-4503-acc8-7273017df7d4.png",
+              "logowidth": 100
+            }
+          },
+          "image_gr7eCy": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/472241699419063450-ffb26763-9ea5-48be-ad00-9ab662f01fd3.webp",
+              "logowidth": 100
+            }
+          },
+          "image_ADneUM": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/472241699419063450-c2001977-1340-4789-8d0d-6968291c95eb.webp",
+              "logowidth": 100
+            }
+          },
+          "image_cNhhTR": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/472241699419063450-d535e676-dd7d-457d-b155-7982f5ac934f.png",
+              "logowidth": 100
+            }
+          },
+          "image_EF7FtN": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Bevis_Gear_White_Logo.png",
+              "logowidth": 100
+            }
+          },
+          "image_iJRNjX": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/472241699419063450-533586ae-ca8f-4323-8906-d28baf5dcfb6.png",
+              "logowidth": 100
+            }
+          },
+          "image_398TWX": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/corefirst-logo-white-03.webp",
+              "logowidth": 100
+            }
+          },
+          "image_ByMGnq": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/472241699419063450-3fbe69c3-787a-49c5-98a0-54f119caaea0.png",
+              "logowidth": 100
+            }
+          },
+          "image_Qhyzxy": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Valari-Logos__Final-04_1_256x_a02db156-250d-46c5-b8b4-b42a316673a5.png",
+              "logowidth": 70
+            }
+          },
+          "image_fanmRC": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/pikewhite_200x_4b4ea232-dd08-46dc-9e65-b10ea80d08b8.png",
+              "logowidth": 100
+            }
+          },
+          "image_fKXHiC": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/472241699419063450-f8ea9433-dadb-4c64-9345-8b6d790e3ff2.svg",
+              "logowidth": 85
+            }
+          },
+          "image_ejyr6C": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/472241699419063450-2c5c6bcb-1125-48bf-81bc-06d4f185cbd7.svg",
+              "logowidth": 100
+            }
+          },
+          "image_xwbgHp": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/472241699419063450-9a76d59b-b5a6-4065-af2a-5859e304beec.webp",
+              "logowidth": 100
+            }
+          },
+          "image_zaGHAn": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/480089164709102389-550ccfbc-3c87-49fc-bd15-fcae4ac3f043.webp",
+              "logowidth": 200
+            }
+          },
+          "image_PaTCPJ": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/472241699419063450-9a76d59b-b5a6-4065-af2a-5859e304beec.webp",
+              "logowidth": 200
+            }
+          }
+        },
+        "block_order": [
+          "title_TitNTA",
+          "style_4FkgEQ",
+          "image_hGHKNN",
+          "image_WzVLNA",
+          "image_yPWqNd",
+          "image_hHHEke",
+          "image_M6BaQf",
+          "image_CAPJNh",
+          "image_EiFKRQ",
+          "image_qGCGfG",
+          "image_LACfi3",
+          "image_eKAkeB",
+          "image_Y7eJXB",
+          "image_xFHR4M",
+          "image_LabLTM",
+          "image_BaXEKd",
+          "image_XUTBf8",
+          "image_zRpfNX",
+          "image_wFjMqX",
+          "image_bWHfpi",
+          "image_YLgWiF",
+          "image_b8tNc7",
+          "image_ANGKRE",
+          "image_mAkhiD",
+          "image_Npjex6",
+          "image_kLGAfr",
+          "image_QtFxEP",
+          "image_gr7eCy",
+          "image_ADneUM",
+          "image_cNhhTR",
+          "image_EF7FtN",
+          "image_iJRNjX",
+          "image_398TWX",
+          "image_ByMGnq",
+          "image_Qhyzxy",
+          "image_fanmRC",
+          "image_fKXHiC",
+          "image_ejyr6C",
+          "image_xwbgHp",
+          "image_zaGHAn",
+          "image_PaTCPJ"
+        ],
+        "settings": {
+          "width": "container",
+          "logoperrow": "col-20",
+          "color": "#282521",
+          "top": 70,
+          "bottom": 70,
+          "left": 0,
+          "right": 0
+        }
+      },
+      "home_brand_logos_Dym4bq": {
+        "type": "home-brand-logos",
+        "blocks": {
+          "title_hKcYwG": {
+            "type": "title",
+            "settings": {
+              "title": "We are supported by the following investors who were also early in Shopify, Pinterest, Airbnb, and Dashlane"
+            }
+          },
+          "style_tLzrXX": {
+            "type": "style",
+            "settings": {
+              "padding": "",
+              "textColor": "#4ea2b2",
+              "align": true
+            }
+          },
+          "image_pqGEyN": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/472241699419063450-8042f060-a1e8-4253-928a-deb584b94a81_1.png",
+              "logowidth": 190
+            }
+          },
+          "image_wMEe6N": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/472241699419063450-ac957f8f-cd84-4f05-a74b-0704fcfe8406.png",
+              "logowidth": 195
+            }
+          },
+          "image_hxEzfm": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/472241699419063450-6b051899-9bb8-4a54-bc6c-0074c7b5bab9.png",
+              "logowidth": 190
+            }
+          },
+          "image_pdAGbc": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/472241699419063450-7b18732f-5448-418a-b4b0-60692c5b87fb.png",
+              "logowidth": 110
+            }
+          },
+          "image_9htCbB": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/472241699419063450-78c8d0be-bd62-40b1-889c-4f459e3fdb3f.png",
+              "logowidth": 90
+            }
+          },
+          "image_FLteJL": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/472241699419063450-804c5144-1559-4f5a-8c3a-08c159b90fa8.png",
+              "logowidth": 190
+            }
+          },
+          "image_UUVAeL": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/472241699419063450-8062a629-e003-4e17-a0ca-d0cce24d2b02.png",
+              "logowidth": 200
+            }
+          },
+          "image_ydDz6m": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/472241699419063450-311bbcaa-2eec-469a-84e7-085ad087b043.png",
+              "logowidth": 105
+            }
+          }
+        },
+        "block_order": [
+          "title_hKcYwG",
+          "style_tLzrXX",
+          "image_pqGEyN",
+          "image_wMEe6N",
+          "image_hxEzfm",
+          "image_pdAGbc",
+          "image_9htCbB",
+          "image_FLteJL",
+          "image_UUVAeL",
+          "image_ydDz6m"
+        ],
+        "settings": {
+          "width": "container",
+          "logoperrow": "col-25",
+          "color": "#ffffff",
+          "top": 70,
+          "bottom": 70,
+          "left": 0,
+          "right": 0
+        }
+      },
+      "home_faq_UdfLBi": {
+        "type": "home-faq",
+        "blocks": {
+          "title_AW6rYr": {
+            "type": "title",
+            "settings": {
+              "title": "Frequently asked questions",
+              "textcolor": "#262420",
+              "top": 0,
+              "bottom": 70
+            }
+          },
+          "faq_HepzWt": {
+            "type": "faq",
+            "settings": {
+              "question": "How do we get started?",
+              "answer": "By simply completing the onboarding form. Once we receive your form, we’ll review the information provided, and schedule the onboarding meeting with you and your team."
+            }
+          },
+          "faq_mtFFRf": {
+            "type": "faq",
+            "settings": {
+              "question": "Is the pricing per page, campaign, or monthly?",
+              "answer": "For the Pagebuilder Pro tier, the pricing is per page. Because this tier does not include testing and only the page creation, the page is typically delivered within 1-2 weeks depending on revisions, as long as we have all the collateral needed to create the page.<br><br>\n For Conversion Complete, the pricing is also per page with optimization. We'll test for up to two months or 50,000 visitors, and use the results to create the ideal page."
+            }
+          },
+          "faq_xm4Lxy": {
+            "type": "faq",
+            "settings": {
+              "question": "Why do I need a landing page? Why wouldn't I just make my homepage like a landing page?",
+              "answer": "Home pages, product pages, and collection pages serve many different purposes.  As a result, they can not speak to a specific audience or intent.  Landing pages are built for a single audience and goal.  It’s the best way to ensure every prospect has a direct and personal journey to conversion."
+            }
+          },
+          "faq_VgtN4h": {
+            "type": "faq",
+            "settings": {
+              "question": "How do I know if I should buy a page?",
+              "answer": "A landing page is great for every business that decrease bounce rate and increase sales. For smaller businesses, Page Builder Pro is the place to start. If you spend over $10,000 per month in paid traffic, you're a candidate for Conversion Complete! If you sell a high AOV product, a product with a high barrier to entry, or you're creating a new category, you'll greatly benefit from more focused landing pages."
+            }
+          },
+          "faq_edkBMn": {
+            "type": "faq",
+            "settings": {
+              "question": "How quickly will you get it done?",
+              "answer": "Once we receive all of you assets, and access to Shopify, GA and Facebook, your first landing page should be ready within 1-2 weeks."
+            }
+          },
+          "faq_Rez9EL": {
+            "type": "faq",
+            "settings": {
+              "question": "What do you need from my end? ",
+              "answer": "In order to make your personalized landing pages, we’ll need as much information regarding your brand as possible, including:\n<ul>\n<li>Brand book\n<\/li>\n<li>Creative Assets (images, videos, gifs, UGC)\n<\/li>\n<li>Biggest pains points\n<\/li>\n<li>Biggest Brand\/Marketing goals\n\n<\/li>\n\n\n<\/ul>"
+            }
+          },
+          "faq_NJqJXa": {
+            "type": "faq",
+            "settings": {
+              "question": "How long does onboarding take? ",
+              "answer": "After you make the purchase, we'll send you the onboarding form together with instructions on how to set up your Unbounce account, in case you don't have one. Once you submit the onboarding form, we'll arrange a 30 min call and after that, we are ready to go."
+            }
+          },
+          "faq_xwXiy4": {
+            "type": "faq",
+            "settings": {
+              "question": "What’s the biggest impact of having a landing page? ",
+              "answer": "The immediate impact of a ShopLandingAI page is a decrease in bounce rate and increase in session time from new prospects.  When prospects find what they were expecting when they clicked on the ad, they are more likely to engage with your brand.  With this deeper engagement, we then see conversions start to climb due to the focus and curation that the page provides."
+            }
+          },
+          "faq_P7twzg": {
+            "type": "faq",
+            "settings": {
+              "question": "Where could I use a landing page? ",
+              "answer": "ShopLandingAI pages are most effective against a discrete audience.  This often means a specific ad campaign that targets a specific audience.  At any stage in the funnel, if there is information or incentives that will help that audience, landing pages are the best way to build that rich customer experience."
+            }
+          }
+        },
+        "block_order": [
+          "title_AW6rYr",
+          "faq_HepzWt",
+          "faq_mtFFRf",
+          "faq_xm4Lxy",
+          "faq_VgtN4h",
+          "faq_edkBMn",
+          "faq_Rez9EL",
+          "faq_NJqJXa",
+          "faq_xwXiy4",
+          "faq_P7twzg"
+        ],
+        "settings": {
+          "width": "container",
+          "color": "#ffffff",
+          "textcolor": "#000000",
+          "top": 100,
+          "bottom": 100,
+          "left": 0,
+          "right": 0
+        }
+      },
+      "home_card_box_d4XNnz": {
+        "type": "home-card-box",
+        "blocks": {
+          "cardbox_mtMWQj": {
+            "type": "cardbox",
+            "settings": {
+              "title": "Make your ads more relevant",
+              "des": "ShopLandingAI turns clicks into conversions by removing friction and giving your customers what they're looking for.",
+              "btntext": "Increase Conversions Today",
+              "btnlink": "https:\/\/calendly.com\/john-baotris\/shoplandingai-intro",
+              "bgcolor": "#d9a057",
+              "textcolor": "#272620",
+              "texcolorbtn": "#272620",
+              "bdbtn": "#ffffff",
+              "bdbtnhover": "#4ea2b2",
+              "textbtnhover": "#ffffff"
+            }
+          },
+          "cardbox_KhkwdC": {
+            "type": "cardbox",
+            "settings": {
+              "title": "Book a demo with us",
+              "des": "Schedule time to discuss how ShopLandingAI could supercharge your marketing needs.",
+              "btntext": "Contact Us",
+              "btnlink": "https:\/\/calendly.com\/john-baotris\/shoplandingai-intro?month=2024-05",
+              "bgcolor": "#4c9ead",
+              "textcolor": "#ffffff",
+              "texcolorbtn": "#262420",
+              "bdbtn": "#ffffff",
+              "bdbtnhover": "#d9a057",
+              "textbtnhover": "#1773b0"
+            }
+          }
+        },
+        "block_order": [
+          "cardbox_mtMWQj",
+          "cardbox_KhkwdC"
+        ],
+        "settings": {
+          "width": "container",
+          "color": "#efecec",
+          "top": 60,
+          "bottom": 80,
+          "left": 0,
+          "right": 0
+        }
+      }
+    },
+    "order": [
+      "main",
+      "zegsu-header-bar",
+      "home_hero_DxdGkE",
+      "home_video_BRLRXG",
+      "home_list_box_6diTf8",
+      "home_slider_kM6P66",
+      "home_packages_acPXEN",
+      "home_review_mFEdbJ",
+      "home_video_Yx8fKn",
+      "home_testimonials_XPjD8E",
+      "home_image_slider_VyNXkK",
+      "home_brand_logos_eMBbtK",
+      "home_box_cBDjbY",
+      "home_testimonials_WBRzay",
+      "home_card_box_jeb7nM",
+      "home_brand_logos_Uk8QPB",
+      "home_brand_logos_Dym4bq",
+      "home_faq_UdfLBi",
+      "home_card_box_d4XNnz"
+    ]
+  }

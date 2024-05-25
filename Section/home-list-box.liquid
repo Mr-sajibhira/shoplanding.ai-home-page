@@ -1,0 +1,338 @@
+
+<link rel="stylesheet"  href="{{ 'home-custom.css' | asset_url }}"   >
+
+
+ {%liquid  
+      assign width =  section.settings.width 
+      assign top =  section.settings.top 
+      assign bottom =  section.settings.bottom 
+      assign left =  section.settings.left 
+      assign right =  section.settings.right 
+      assign color =  section.settings.color  
+    %}
+
+    
+<style>
+   #shopify-section-{{ section.id }}{
+     background-color:{{color}};
+   }
+
+ .id_{{ section.id }} .main-box{
+  margin:-16px;
+}
+  
+.id_{{ section.id }} .box_content{
+  padding:50px 40px 50px 30px;
+  background:{{ section.settings.boxbg}};
+  height:100%;
+  border-radius:10px;  
+    display: flex;
+ 
+}
+
+.id_{{ section.id }} .box{
+  height:100%;
+  padding:16px;
+}  
+  .id_{{ section.id }} h2.title{
+       
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 120%;
+      color:{{section.settings.boxn}};
+       font-family:Poppins;
+      margin:0px;
+     letter-spacing: normal;
+  }
+.id_{{ section.id }} .box_title{
+    font-size:24px;
+    font-weight:600;
+    line-height:130%;
+    color:{{section.settings.boxt}};
+  margin:0px 0px 15px 0px;
+  font-family:Poppins;
+   letter-spacing: normal;
+  }
+.id_{{ section.id }} .des{
+  font-size:15px;
+    font-weight:400;
+    line-height:150%;
+    color:{{section.settings.boxt}};
+   font-family:Poppins;
+  letter-spacing:0.6px;
+  display:block;
+   letter-spacing: normal;
+  margin:0px;
+}
+
+.id_{{ section.id }} .number {
+    display: flex;
+    align-items: center;
+    margin: 0px 15px 0px 0px;
+}
+.id_{{ section.id }} .number h3{
+   font-size:80px;
+    font-weight:800 !important;
+    line-height:130%;
+    color:{{section.settings.boxn}};
+   font-family:Poppins;
+  margin:0px;
+}
+
+
+  @media(max-width:767px){
+.id_{{ section.id }} {
+  padding:0px 15px;
+}
+      .id_{{ section.id }} h2.title{
+       
+    font-size: 36px !important;
+        margin:0px 0px 30px 0px !important;
+    }
+    .id_{{ section.id }} .box_content{
+  padding:20px 10px 20px 10px;
+  flex-wrap:wrap;
+     text-align: center;
+      justify-content: center;
+}
+
+.id_{{ section.id }} .box_title{
+    font-size:20px;
+  }
+    .id_{{ section.id }} .des{
+  font-size:14px;
+}
+  .id_{{ section.id }} .number h3{
+   font-size:40px;
+}
+.id_{{ section.id }} .box{
+  height:100%;
+  padding:10px;
+} 
+ .id_{{ section.id }} .main-box{
+  margin:-10px;
+}
+    
+  }
+  
+</style>   
+   
+
+<section class="id_{{ section.id }}">
+    <div class="{{ width }}" style="
+        padding-top:{{ top }}px;
+        padding-bottom:{{ bottom }}px;
+        padding-left:{{ left }}px;
+        padding-right:{{ right }}px; 
+      ">
+
+  {% for block in section.blocks %} 
+    
+    {%liquid  assign title =  block.settings.title %}
+
+
+    
+
+    
+  {% case block.type %}
+    {% when 'title' %}
+
+
+    <style>
+    .id_{{ section.id }} .title{
+      text-align:center;
+    }
+    </style>
+         <h2 class="title" style="
+        margin-top:{{ block.settings.top }}px;
+        margin-bottom:{{ block.settings.bottom }}px;
+           color:{{ block.settings.textcolor }}
+      ">{{ title }}</h2>   
+      {% endcase %}
+      {% endfor %}
+
+ 
+  <div class="flex wrap main-box"> 
+    
+{% for block in section.blocks %} 
+    {% case block.type %}
+    {% when 'box' %}
+
+
+<div class="col-33">      
+<div class="box">
+<div class="box_content">
+  <div class="number">
+    <h3>{{ block.settings.numberid }}</h3>
+  </div>
+
+  <div class="content">
+    <h4 class="box_title">{{ block.settings.boxtitle }}</h4>
+    <p class="des">{{ block.settings.boxdes }}</p>
+  </div>
+  
+</div>
+</div>
+ </div>
+      
+{% endcase %}
+ {% endfor %}
+    
+  </div>      
+
+
+      
+ </div>
+</section>  
+
+
+{% schema %}
+  {
+    "name": "Home List Box",
+    "settings": [
+            {
+        "type": "select",
+        "label": "Section",
+        "id": "width",
+        "options":[
+          {"value":"container","label": "Container"},
+          {"value":"container-full","label": "Container Full"}
+        ]
+      },
+      {
+        "type": "color",
+        "label": "Section Color",
+        "id": "color" 
+      }, 
+      {
+             "type": "color",
+             "label": "Box Background Color",
+             "id": "boxbg",
+             "default":"#333333"
+           },
+           {
+             "type": "color",
+             "label": "Box Text Color",
+             "id": "boxt",
+             "default":"#ffffff"
+           },
+           {
+             "type": "color",
+             "label": "Box Number Color",
+             "id": "boxn",
+             "default":"#4EA2B2"
+           },
+      {
+        "type": "header",
+        "content": "Title Margin"
+      },
+      {
+        "type": "range",
+        "label": "Top",
+        "id": "top",
+         "min":0,
+        "max":200,
+        "step": 5,
+        "default":0
+      },
+      {
+        "type": "range",
+        "label": "Bottom",
+        "id": "bottom",
+         "min":0,
+        "max":200,
+        "step": 5,
+        "default":0
+      },
+      {
+        "type": "range",
+        "label": "Left",
+        "id": "left",
+         "min":0,
+        "max":200,
+        "step": 5,
+        "default":0
+      },
+      {
+        "type": "range",
+        "label": "Right",
+        "id": "right",
+         "min":0,
+        "max":200,
+        "step": 5,
+        "default":0
+      }
+    ],
+     "blocks":[
+       {
+        "type": "title",
+        "name":"Title",
+         "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "label": "Title",
+            "id": "title",
+            "default":"Drive More Conversions with AI-Optimized Landing Pages"
+          },
+          {
+            "type": "color",
+            "label": "Text Color",
+            "id": "textcolor",
+            "default":"#000000"
+          },
+          {
+        "type": "header",
+        "content": "Section Padding"
+      },
+        {
+        "type": "range",
+        "label": "Tob",
+        "id": "top",
+         "min":0,
+        "max":200,
+        "step": 5,
+        "default":0
+      },
+      {
+        "type": "range",
+        "label": "Botton",
+        "id": "bottom",
+         "min":0,
+        "max":200,
+        "step": 5,
+        "default":0
+      }
+        ] 
+      },
+       {
+         "type": "box",
+         "name": "Box",
+         "settings": [
+           {
+             "type": "text",
+             "id": "numberid",
+             "label": "Number"
+           },
+           {
+             "type": "text",
+             "label": "Title",
+             "id": "boxtitle",
+             "default":"We connect your brand to customers better. "
+           },
+            {
+             "type": "textarea",
+             "label": "Description",
+             "id": "boxdes",
+             "default":"At ShopLandingAI, we create pages that share your story better than a website. Customers convert when they see how a product is relevant to their lives. Making a deeper connection on first click makes lifelong customers."
+           }
+         ]
+       }
+     ],
+    "presets": [
+      {
+        "name": "Home List Box"
+      }
+    ]
+  }
+{% endschema %}

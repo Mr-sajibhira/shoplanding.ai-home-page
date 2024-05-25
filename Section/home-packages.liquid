@@ -1,0 +1,425 @@
+<link rel="stylesheet" href="{{ 'home-custom.css' | asset_url }}">
+
+{% liquid
+  assign width = section.settings.width
+  assign top = section.settings.top
+  assign bottom = section.settings.bottom
+  assign left = section.settings.left
+  assign right = section.settings.right
+  assign color = section.settings.color
+%}
+
+<style>
+     #shopify-section-{{ section.id }}{
+       background-color:{{color}};
+     }
+
+   .id_{{ section.id }} .main-box{
+     
+  }
+
+  .id_{{ section.id }} .box_content{
+    padding:50px 40px 50px 30px;
+    background:{{ section.settings.boxbg}};
+    height:100%;
+    border-radius:10px;
+    display:flex;
+  }
+
+  .id_{{ section.id }} .box{
+    height:100%;
+    padding:15px;
+  }
+
+  .id_{{ section.id }} .box_title{
+      
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 130%;
+    color: #ffffff;
+    margin: 10px 0px 15px 0px; 
+    }
+  .id_{{ section.id }} .des{
+    font-size:15px;
+      font-weight:400;
+      line-height:150%;
+      color:{{section.settings.boxt}};
+     font-family:Poppins;
+    letter-spacing:0.6px;
+    display:block;
+  }
+
+  .id_{{ section.id }} .box_content {
+     
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    text-align: center; 
+  }
+  .id_{{ section.id }} .box_content h2{
+       font-size:24px;
+      font-weight:600 !important;
+      line-height:130%;
+      color:{{section.settings.boxn}};
+       font-family:Poppins;
+      margin:0px;
+  }
+  .id_{{ section.id }} .box_content h4.price{
+     
+    font-size:26px;
+      font-weight:600 !important;
+      line-height:130%;
+    color:#fff;
+  }
+  .id_{{ section.id }} .box_content span{
+        color: #FFFFFF;
+    font-size: 13px;
+    margin-bottom:30px;
+    display:block;
+  }
+  .id_{{ section.id }} .box_content a{
+    
+      display: inline-flex;
+      background-color: #fff;
+    border:2px solid #fff;
+      color: #333;
+      text-decoration: none;
+      border-radius: 30px;
+      padding: 6px 25px;
+      text-transform: capitalize;
+      font-weight: 600;
+    transition-duration:0.4s;
+  }
+  .id_{{ section.id }} .box_content a:hover{
+    background-color: transparent;
+    color:#fff;
+  }
+  .id_{{ section.id }} .box_content .des ul{
+    
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+   
+    padding: 0;
+    text-align: left;
+    margin-top: 30px;
+    margin-bottom: 0;
+    list-style: none;
+  }
+  .id_{{ section.id }} .box_content .des ul li{
+    
+    display: flex;
+  }
+  .id_{{ section.id }} .box_content .des ul li::before{
+    
+    content: "\2713";
+    color: #D9A057;
+    font-size: 20px;
+    margin-right: 10px;
+  }
+  .id_{{ section.id }} h2.title{
+       
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 120%;
+      color:{{section.settings.boxn}};
+       font-family:Poppins;
+      margin:0px;
+  }
+
+
+  @media(max-width:767px){
+
+    
+      .id_{{ section.id }} .box_content{
+    padding:30px 20px 30px 20px;
+  }
+  .id_{{ section.id }} .title{
+   font-size: 28px !important;
+    margin: 0px 15px 10px !important;
+  }
+      .id_{{ section.id }} .box_title{
+      
+    font-size: 24px;
+    font-weight: 500;
+    }
+ .id_{{ section.id }} .box_content h4.price {
+    font-size: 20px;
+    margin: 0;
+}
+      .id_{{ section.id }} .box_content a{
+    
+ justify-content: center;
+        width:100%;
+  }
+
+     justify-content: center;
+  }
+</style>
+
+<section id="package" class="id_{{ section.id }}">
+  <div
+    class="{{ width }}"
+    style="
+      padding-top:{{ top }}px;
+      padding-bottom:{{ bottom }}px;
+      padding-left:{{ left }}px;
+      padding-right:{{ right }}px;
+    "
+  >
+    {% for block in section.blocks %}
+      {% liquid
+        assign title = block.settings.title
+        assign subtitle = block.settings.subtitle
+      %}
+
+      {% case block.type %}
+        {% when 'title' %}
+          <style>
+            .id_{{ section.id }} .subtitle,
+            .id_{{ section.id }} .title{
+              text-align:center;
+            }
+          </style>
+          <h4 class="subtitle"  >
+            {{ subtitle }}
+          </h4>
+          <h2
+            class="title"
+            style="
+              margin-top:{{ block.settings.top }}px;
+              margin-bottom:{{ block.settings.bottom }}px;
+                 color:{{ block.settings.textcolor }}
+            "
+          >
+            {{ title }}
+          </h2>
+      {% endcase %}
+    {% endfor %}
+
+    <div class="flex wrap main-box">
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'package' %}
+            <div class="col-33">
+              <div class="box">
+                <div class="box_content">
+                  <div class="">
+                    <h2>{{ block.settings.numberid }}</h2>
+                  </div>
+
+                  <div class="content">
+                    <h3 class="box_title">{{ block.settings.boxtitle }}</h3>
+                    <p class="des">{{ block.settings.description }}</p>
+
+                    <h4 class="price">{{ block.settings.price }}{% unless block.settings.priceper == empty %}/ {{ block.settings.priceper }}{% endunless %}</h4>
+                    <span>{{ block.settings.duration }}</span>
+
+                    <a href="{{ block.settings.url }}">{{ block.settings.btntext }}</a>
+ 
+                    
+                    <div class="des">
+                    {{ block.settings.content }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        {% endcase %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Home Packages",
+  "settings": [
+          {
+      "type": "select",
+      "label": "Section",
+      "id": "width",
+      "options":[
+        {"value":"container","label": "Container"},
+        {"value":"container-full","label": "Container Full"}
+      ]
+    },
+    {
+      "type": "color",
+      "label": "Section Color",
+      "id": "color"
+    },
+    {
+           "type": "color",
+           "label": "Box Background Color",
+           "id": "boxbg",
+           "default":"#333333"
+         },
+         {
+           "type": "color",
+           "label": "Box Text Color",
+           "id": "boxt",
+           "default":"#ffffff"
+         },
+         {
+           "type": "color",
+           "label": "Box Number Color",
+           "id": "boxn",
+           "default":"#4EA2B2"
+         },
+    {
+      "type": "header",
+      "content": "Title Margin"
+    },
+    {
+      "type": "range",
+      "label": "Top",
+      "id": "top",
+       "min":0,
+      "max":200,
+      "step": 5,
+      "default":0
+    },
+    {
+      "type": "range",
+      "label": "Bottom",
+      "id": "bottom",
+       "min":0,
+      "max":200,
+      "step": 5,
+      "default":0
+    },
+    {
+      "type": "range",
+      "label": "Left",
+      "id": "left",
+       "min":0,
+      "max":200,
+      "step": 5,
+      "default":0
+    },
+    {
+      "type": "range",
+      "label": "Right",
+      "id": "right",
+       "min":0,
+      "max":200,
+      "step": 5,
+      "default":0
+    }
+  ],
+   "blocks":[
+     {
+      "type": "title",
+      "name":"Title",
+       "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "label": "Title",
+          "id": "title",
+          "default":"The ShopLandingAI Solution"
+        },
+        {
+          "type": "text",
+          "label": "Sub Title",
+          "id": "subtitle",
+          "default":"The Packages"
+        },
+        {
+          "type": "color",
+          "label": "Text Color",
+          "id": "textcolor",
+          "default":"#000000"
+        },
+        {
+      "type": "header",
+      "content": "Section Padding"
+    },
+      {
+      "type": "range",
+      "label": "Tob",
+      "id": "top",
+       "min":0,
+      "max":200,
+      "step": 5,
+      "default":0
+    },
+    {
+      "type": "range",
+      "label": "Botton",
+      "id": "bottom",
+       "min":0,
+      "max":200,
+      "step": 5,
+      "default":0
+    }
+      ]
+    },
+     {
+       "type": "package",
+       "name": "Package",
+       "settings": [
+         {
+           "type": "text",
+           "id": "numberid",
+           "label": "Number"
+         },
+         {
+           "type": "text",
+           "label": "Title",
+           "id": "boxtitle",
+           "default":"We connect your brand to customers better. "
+         },
+          {
+           "type": "textarea",
+           "label": "Description",
+           "id": "description",
+            "default":"For Smaller Brands <br> Outcome: Improved Customer Journey"
+             
+         },
+         {
+           "type": "text",
+           "label": "Price",
+           "id": "price",
+           "default":"$1,500"
+         },
+         {
+           "type": "text",
+           "label": "Price per",
+           "id": "priceper",
+           "default":"Month"
+         },
+         {
+           "type": "text",
+           "label": "Duration",
+           "id": "duration",
+           "default":"One-Time Purchase"
+         },
+         {
+           "type": "text",
+           "label": "Button Text",
+           "id": "btntext",
+           "default":" Make Profits Skyrocket "
+         },
+         {
+           "type": "url",
+           "label": "Link",
+           "id": "url"
+         },
+          {
+           "type": "richtext",
+           "label": "Description",
+           "id": "content"
+             
+         }
+       ]
+     }
+   ],
+  "presets": [
+    {
+      "name": "Home Packages"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,355 @@
+<link rel="stylesheet"  href="{{ 'home-custom.css' | asset_url }}"   >
+
+
+ {%liquid  
+      assign width =  section.settings.width 
+      assign top =  section.settings.top 
+      assign bottom =  section.settings.bottom 
+      assign left =  section.settings.left 
+      assign right =  section.settings.right 
+      assign color =  section.settings.color 
+       assign textcolor =  section.settings.textcolor
+    %}
+
+    
+<style>
+   #shopify-section-{{ section.id }}{
+     background-color:{{color}};
+   }
+#shopify-section-{{ section.id }} h2{
+    font-family: Poppins;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 130%;
+    text-align: center;
+}
+
+
+
+
+  
+ #shopify-section-{{ section.id }} .faq_box{
+   max-width:606px;
+   width:100%;
+   margin:0px auto;
+ }
+
+   #shopify-section-{{ section.id }} .faq_box  .faq_button{
+     padding: 20px 0px;
+     border:solid #000;
+     border-width:0px 0px 1px 0px;
+     cursor: pointer;
+}
+
+  
+  #shopify-section-{{ section.id }} .faq_box .text{
+      position: relative;
+  }
+  #shopify-section-{{ section.id }} .faq_box .text p{
+    
+    font-family: Poppins;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 150%;
+    margin:0px;
+    color:{{textcolor}};
+
+    padding: 0px 50px 0px 0px;
+    box-sizing: border-box;
+
+    
+  }
+
+  
+    #shopify-section-{{ section.id }} .faq_box .text::after{
+        position: absolute;
+    content: "";
+    width: 16px;
+    height: 1px;
+    background: {{textcolor}};
+    top: 50%;
+    border-radius: 50px;
+    right: 10px;
+    transform: translate(-10px, -50%);
+  }
+
+  #shopify-section-{{ section.id }} .faq_box .text::before{
+        position: absolute;
+    content: "";
+    width: 1px;
+    height: 16px;
+    background: {{textcolor}};
+    top: 50%;
+    border-radius: 50px;
+    right: 14px;
+    transform: translate(-14px, -50%);
+    transition-duration: .3s;
+  }
+
+
+  #shopify-section-{{ section.id }} .faq_button.active .text::before{
+
+    transform: translate(-14px, -50%) rotate(90deg);
+  }
+ #shopify-section-{{ section.id }} .faq_box .ans{
+     display: none;
+     color: {{textcolor}};
+     padding: 8px 0px 8px;
+ }
+    #shopify-section-{{ section.id }} .faq_box .des{
+  
+    margin:0px 0px 16px 0px;
+    font-family: Poppins;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.6px;
+    color: {{textcolor}};
+    text-align: left;
+  
+}
+
+@media(max-width:767px){
+   #shopify-section-{{ section.id }}{
+     padding:50px 15px;
+    box-sizing: border-box;
+}
+  #shopify-section-{{ section.id }} h2{
+    font-size: 30px;
+    margin:0px 0px 10px 0px !important;
+}
+     #shopify-section-{{ section.id }} .container{
+      padding:0px 0px !important;
+   }
+
+  
+#shopify-section-{{ section.id }} .faq_box .text p{
+    font-size: 14px;  
+  }
+      #shopify-section-{{ section.id }} .faq_box .des{
+  
+    font-size: 14px;
+}
+
+}
+</style>   
+   
+
+
+
+
+
+<section class="id_{{ section.id }}">
+    <div class="{{ width }}" style="
+        padding-top:{{ top }}px;
+        padding-bottom:{{ bottom }}px;
+        padding-left:{{ left }}px;
+        padding-right:{{ right }}px; 
+      ">
+
+{% for block in section.blocks %} 
+
+  {% liquid
+    assign title = block.settings.title
+    assign title_color = block.settings.textcolor
+    assign title_m_top = block.settings.top
+    assign title_m_bottom = block.settings.bottom
+    assign faq_Q = block.settings.question
+    assign faq_A = block.settings.answer         
+  %}
+        
+  {% case block.type %} 
+    
+         {% when 'title' %}
+               <h2 style="color:{{ title_color }}; margin-top:{{ title_m_top }}px; margin-bottom:{{ title_m_bottom }}px;">{{ title }}</h2>
+   {% when 'faq' %}
+
+    <div class="faq_box">
+         <div class="faq">
+            <div class="faq_button">
+                <div class="text">
+                    <p class="text_tag">{{ faq_Q }}</p>
+                </div>
+            </div>
+           <div class="ans">
+            <p class="des">{{ faq_A}}</p>
+
+             </div>
+        </div>
+    </div>
+    
+
+
+
+    
+      {% endcase %}
+{% endfor %}
+
+
+
+      
+ </div>
+</section>  
+      
+
+
+
+<script>
+    var acc = document.getElementsByClassName("faq_button");
+    var i;
+  
+
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var ans = this.nextElementSibling;
+        if (ans.style.display === "block") {
+            ans.style.display = "none";
+        } else {
+            ans.style.display = "block";
+        }
+      });
+    }
+    </script>
+
+
+
+
+
+
+
+{% schema %}
+  {
+    "name": "Home Faq",
+    "settings": [
+            {
+        "type": "select",
+        "label": "Section",
+        "id": "width",
+        "options":[
+          {"value":"container","label": "Container"},
+          {"value":"container-full","label": "Container Full"}
+        ]
+      },
+      {
+        "type": "color",
+        "label": "Section Color",
+        "id": "color" 
+      },
+      {
+        "type": "color",
+        "label": "Text Color",
+        "id": "textcolor",
+        "default":"#000000"
+      },
+      {
+        "type": "header",
+        "content": "Section Padding"
+      },
+      {
+        "type": "range",
+        "label": "Top",
+        "id": "top",
+         "min":0,
+        "max":200,
+        "step": 5,
+        "default":0
+      },
+      {
+        "type": "range",
+        "label": "Bottom",
+        "id": "bottom",
+         "min":0,
+        "max":200,
+        "step": 5,
+        "default":0
+      },
+      {
+        "type": "range",
+        "label": "Left",
+        "id": "left",
+         "min":0,
+        "max":200,
+        "step": 5,
+        "default":0
+      },
+      {
+        "type": "range",
+        "label": "Right",
+        "id": "right",
+         "min":0,
+        "max":200,
+        "step": 5,
+        "default":0
+      }
+    ],
+    "blocks": [
+      {
+        "type": "title",
+        "name":"Title",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default":"Frequently asked questions"
+          },
+          {
+            "type": "color",
+            "id": "textcolor",
+            "label": "Text Color",
+            "default":"#262420"
+          },
+          {
+        "type": "header",
+        "content": "Title Margin"
+      },
+      {
+        "type": "range",
+        "label": "Top",
+        "id": "top",
+         "min":0,
+        "max":200,
+        "step": 5,
+        "default":0
+      },
+      {
+        "type": "range",
+        "label": "Bottom",
+        "id": "bottom",
+         "min":0,
+        "max":200,
+        "step": 5,
+        "default":0
+      }
+        ]
+      },
+      {
+        "type": "faq",
+        "name": "Faq",
+        "settings": [
+          {
+            "type": "text",
+            "id": "question",
+            "label": "Question",
+            "default":"How do we get started?"
+          },
+          {
+            "type": "textarea",
+            "id": "answer",
+            "label": "Answer",
+            "default":"By simply completing the onboarding form. Once we receive your form, we’ll review the information provided, and schedule the onboarding meeting with you and your team."
+          }
+        ]
+      }
+      
+    ],
+    "presets": [
+      {
+        "name": "Home Faq"
+      }
+    ]
+  }
+{% endschema %}

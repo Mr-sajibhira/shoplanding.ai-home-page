@@ -1,0 +1,500 @@
+<link rel="stylesheet"  href="{{ 'home-custom.css' | asset_url }}"   >
+{{ 'swiper.css' | asset_url | stylesheet_tag }}
+{{ 'swiper.js' | asset_url | script_tag }}
+
+
+ {%liquid  
+      assign width =  section.settings.width 
+      assign top =  section.settings.top 
+      assign bottom =  section.settings.bottom 
+      assign left =  section.settings.left 
+      assign right =  section.settings.right 
+      assign color =  section.settings.color
+      assign textcolor =  section.settings.textcolor  
+    %}
+
+    
+<style>
+   #shopify-section-{{ section.id }}{
+     background-color:{{color}};
+   }
+  #shopify-section-{{ section.id }} h2{
+    font-family: Poppins;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 130%;
+    text-align: center;
+}
+
+
+  #shopify-section-{{ section.id }} .testimonialdiv{
+     position: relative;
+      height: 100%;
+  }
+   #shopify-section-{{ section.id }} .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+     #shopify-section-{{ section.id }} .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+     #shopify-section-{{ section.id }} .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  #shopify-section-{{ section.id }} .description{
+    padding:0px 200px;
+    margin:0px 0px 40px 0px;
+  }
+   #shopify-section-{{ section.id }} .des{
+      font-family: Rubik;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150%;
+    text-align: center;
+     color:{{textcolor}};
+   }
+
+    #shopify-section-{{ section.id }} .info{
+      display:flex;
+        align-items: center;
+  justify-content: center;
+      gap:32px;
+      margin:0px 0px 70px 0px;
+    }
+
+    #shopify-section-{{ section.id }}  .img_box img{
+      width:55px;
+      height:55px;
+      object-fit: cover;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    }
+#shopify-section-{{ section.id }} .name{
+   font-family: Rubik;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 150%;
+  letter-spacing:0.6px;
+   margin:0px;
+  text-align:left;
+   color:{{textcolor}};
+}
+
+  #shopify-section-{{ section.id }} .position{
+   font-family: Poppins;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 180%;
+    margin:0px;
+     text-align:left;
+     color:{{textcolor}};
+}
+ #shopify-section-{{ section.id }} .swiper-pagination-bullet-active{
+  background-color: {{textcolor}} !important;
+  
+  
+ }
+   #shopify-section-{{ section.id }} .swiper-pagination-bullet{
+      width:12px;
+      height:12px;
+   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px;
+     --tw-shadow: 0 2px 4px -2px rgba(0,0,0,.1);
+  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color),0 2px 4px -2px var(--tw-shadow-color);
+ }
+  #shopify-section-{{ section.id }} .swiper-button-prev::after, #shopify-section-{{ section.id }} .swiper-button-next::after{
+    font-size: 24px;
+    font-weight:bold;
+    color:{{textcolor}};
+  }
+@media(max-width:767px){
+  
+     #shopify-section-{{ section.id }}{
+     padding:30px 15px;
+    box-sizing: border-box;
+}
+
+       #shopify-section-{{ section.id }} .container{
+     padding:0px !important;
+    box-sizing: border-box;
+}
+ 
+    #shopify-section-{{ section.id }} h2{
+    font-size: 30px;
+    margin:0px 0px 10px 0px !important;
+}
+
+#shopify-section-{{ section.id }} .description{
+    padding:0px 0px;
+    margin:0px 0px 40px 0px;
+  }
+  
+} 
+</style>   
+   
+
+
+
+
+
+<section class="id_{{ section.id }}">
+    <div class="{{ width }}" style="
+        padding-top:{{ top }}px;
+        padding-bottom:{{ bottom }}px;
+        padding-left:{{ left }}px;
+        padding-right:{{ right }}px; 
+      ">
+
+
+   {% for block in section.blocks %}
+
+   {% liquid
+    assign title = block.settings.title
+    assign title_color = block.settings.textcolor
+    assign title_m_top = block.settings.top
+    assign title_m_bottom = block.settings.bottom    
+  %}
+     
+     {% case block.type %}
+     {% when 'title' %}
+               <h2 style="color:{{ title_color }}; margin-top:{{ title_m_top }}px; margin-bottom:{{ title_m_bottom }}px;">{{ title }}</h2>
+  {% endcase %}
+ {% endfor %}
+<div class="testimonialdiv">
+    <div class="swiper testimonialSwiper">
+       <div class="swiper-wrapper">
+      {% for block in section.blocks %}
+        {% case block.type %}
+         {% when 'testimonial' %}
+            <div class="swiper-slide">
+
+                 <div class="single">
+                   <div class="description">
+                     <p class="des">{{ block.settings.des }}</p>   
+                   </div>
+                   <div class="info">
+                     {% if block.settings.img != blank %}
+                       <div class="img_box">
+                         <img src="{{ block.settings.img | image_url }}" alt="{{ block.settings.img.alt }}" height="100" width="100">
+                       </div>
+                       {% endif %}
+                      <div class="info_box">
+                        <h3 class="name">{{ block.settings.name }}</h3>
+                         <p class="position">{{ block.settings.pos }}</p>
+                      </div>
+                       
+                   </div>
+                      
+                  </div>
+               
+            </div>
+        {% endcase %}
+       {% endfor %}
+       </div>
+      
+    <div class="swiper-button-next" style="display:block;"></div>
+    <div class="swiper-button-prev" style="display:block;"></div>
+    <div class="swiper-pagination" style="display:block;"></div>
+      
+  </div>
+</div>
+
+      
+<div>
+
+
+  
+</div>
+
+     {% for block in section.blocks %}
+      {%liquid
+  assign btn_text = block.settings.btntext
+  assign btn_url = block.settings.btnlink
+  assign btn_text_color = block.settings.texcolorbtn
+  assign btn_bg_color = block.settings.bdbtn
+  assign btn_hover_color = block.settings.bdbtnhover
+   assign btn_hover_color_text = block.settings.textbtnhover
+  
+%}
+        {% case block.type %}
+             {% when 'button' %} 
+              <style>
+                #shopify-section-{{ section.id }} .{{ block.id }}{
+                text-align: center;
+                }
+        #shopify-section-{{ section.id }} .{{ block.id }} .btn:hover{
+              color:{{ btn_hover_color_text }} !important;
+              background:{{ btn_hover_color }};
+          }
+        #shopify-section-{{ section.id }} .{{ block.id }} .btn{
+         background-color:{{ btn_bg_color }}; 
+          color:{{ btn_text_color }};
+          margin:{{block.settings.top}}px 0px {{block.settings.bottom}}px 0px;
+            }
+                        #shopify-section-{{ section.id }} .{{ block.id }} .btn{
+                           margin:20px 0px 0px 0px;
+                        }
+</style>
+
+          
+              <div class="{{ block.id }}">             
+              
+
+                {% if btn_url != blank %}
+                  <a href="{{ btn_url }}"class="btn">{{ btn_text }}</a>
+               {% endif %}
+                   
+              </div>
+  
+
+      
+      {% endcase %}
+       {% endfor %}
+
+      
+ </div>
+</section>  
+      
+<script>
+    var swiper = new Swiper(".testimonialSwiper", {
+      cssMode: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      }, centeredSlides: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      mousewheel: true,
+      keyboard: true,
+    });
+  </script>
+
+
+
+
+
+
+
+
+
+
+{% schema %}
+  {
+    "name": "Home Testimonials",
+    "settings": [
+            {
+        "type": "select",
+        "label": "Section",
+        "id": "width",
+        "options":[
+          {"value":"container","label": "Container"},
+          {"value":"container-full","label": "Container Full"}
+        ]
+      },
+      {
+        "type": "color",
+        "label": "Section Color",
+        "id": "color"
+      },
+      {
+        "type": "color",
+        "label": "Text Color",
+        "id": "textcolor",
+        "default":"#000000"
+      },
+      {
+        "type": "header",
+        "content": "Section Padding"
+      },
+      {
+        "type": "range",
+        "label": "Top",
+        "id": "top",
+         "min":0,
+        "max":200,
+        "step": 5,
+        "default":0
+      },
+      {
+        "type": "range",
+        "label": "Bottom",
+        "id": "bottom",
+         "min":0,
+        "max":200,
+        "step": 5,
+        "default":0
+      },
+      {
+        "type": "range",
+        "label": "Left",
+        "id": "left",
+         "min":0,
+        "max":200,
+        "step": 5,
+        "default":0
+      },
+      {
+        "type": "range",
+        "label": "Right",
+        "id": "right",
+         "min":0,
+        "max":200,
+        "step": 5,
+        "default":0
+      }
+    ],
+    "blocks": [
+      {
+        "type": "title",
+        "name":"Title",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default":"Frequently asked questions"
+          },
+          {
+            "type": "color",
+            "id": "textcolor",
+            "label": "Text Color",
+            "default":"#262420"
+          },
+          {
+        "type": "header",
+        "content": "Title Margin"
+      },
+      {
+        "type": "range",
+        "label": "Top",
+        "id": "top",
+         "min":0,
+        "max":200,
+        "step": 5,
+        "default":0
+      },
+      {
+        "type": "range",
+        "label": "Bottom",
+        "id": "bottom",
+         "min":0,
+        "max":200,
+        "step": 5,
+        "default":0
+      }
+        ]
+      },
+      {
+        "type": "testimonial",
+        "name": "Testimonial",
+        "settings": [
+          {
+            "type": "textarea",
+            "id": "des",
+            "label": "Description",
+            "default":"I love working with the ShopLandingAI team - they are extremely responsive, and have gone above and beyond for me. I'm a data person so having their insights has been incredibly valuable. They are great data driven partners and helped me increase my conversions by over 10% in just a few weeks"
+          },
+          {
+            "type": "text",
+            "id": "name",
+            "label": "Name",
+            "default":"Mike Ye"
+          },
+          {
+            "type": "text",
+            "id": "pos",
+            "label": "Position",
+            "default":"Founder/CEO"
+          },
+          {
+            "type": "image_picker",
+            "id": "img",
+            "label": "Select Image"
+          }
+        ]
+      },
+      {
+        "type": "button",
+        "name":"Button",
+        "settings": [
+          {
+            "type": "text",
+            "id": "btntext",
+            "label": "Button Text",
+            "default":"Increase Conversions Today"
+          },
+          {
+            "type": "url",
+            "id": "btnlink",
+            "label": "Button Link"
+          },
+          {
+        "type": "range",
+        "label": "Top",
+        "id": "top",
+         "min":0,
+        "max":200,
+        "step": 5,
+        "default":0
+      },
+      {
+        "type": "range",
+        "label": "Bottom",
+        "id": "bottom",
+         "min":0,
+        "max":200,
+        "step": 5,
+        "default":0
+      },
+          {
+           "type": "header",
+           "content": "Button Color"
+         },
+          
+          {
+            "type": "color",
+            "id": "texcolorbtn",
+            "label": "Button Text Color",
+             "default":"#272620"
+          },
+            {
+            "type": "color",
+            "id": "bdbtn",
+            "label": "Button",
+            "default":"#ffffff"
+          },
+          {
+            "type": "color",
+            "id": "bdbtnhover",
+            "label": " Button Hover",
+             "default":"#4ea2b2"
+          },
+          {
+            "type": "color",
+            "id": "textbtnhover",
+            "label": "Button Text Hover",
+             "default":"#ffffff"
+          }
+        ]
+      }
+      
+    
+    ],
+    "presets": [
+      {
+        "name": "Home Testimonials"
+      }
+    ]
+  }
+{% endschema %}
